@@ -14,7 +14,14 @@
     "symbol": "$",
     "symbolBeforeAmount": true,
     "defaultAmounts": [1, 5, 10],
-    "methods": ["card", "transfer"]
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Card" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "paypal",   "icon": "🅿",  "name": "PayPal" },
+      { "id": "transfer", "icon": "🏦", "name": "Transfer" },
+      { "id": "crypto",   "icon": "₿",  "name": "Crypto" }
+    ]
   },
 
   "ui": {
@@ -45,8 +52,6 @@
     "coc": "your call",
 
     "s2": "Choose payment method",
-    "pc": "Card",
-    "ptr": "Transfer",
 
     "s3": "Leave me a message (optional)",
     "msghint": "I read every single one",
@@ -68,8 +73,35 @@
 
     "badge": "Anonymous",
     "tmt": "Terms",
-    "ft": "© onedollarguy.com"
+    "ft": "© onedollarguy.com · Not a charity · Personal gifts only",
+
+    "nav_lang": "language",
+    "nav_share": "share",
+    "share_title": "Share",
+    "close_title": "Close",
+
+    "astra_q": "?what does it mean?",
+    "astra_a": "„through hardships<br>to the stars\"",
+
+    "kontakt_btn": "contact",
+    "kontakt_msg": "I prefer to stay anonymous — but if you still want to reach out, here is my email:",
+
+    "share_tweet": "I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Join in!",
+
+    "ft_privacy": "Privacy",
+    "ft_soon": "(soon)"
   },
+
+  "terms": [
+    "You are giving a gift. Not buying anything. You receive nothing in return except a thank you.",
+    "The gift is final. No refunds. No chargebacks. No \"I changed my mind.\"",
+    "The donor confirms the funds come from legal sources, free of third-party rights.",
+    "The donor freely transfers ownership of the amount to the recipient, who gratefully accepts.",
+    "No pressure was applied. The donor acts of their own free will, fully aware.",
+    "The donor is 18+ (or legal age in their country).",
+    "This is not a charity, not a public fundraiser, not an investment. It's a personal gift to a private individual.",
+    "Governed by Czech law."
+  ],
 
   "faq": [
     [

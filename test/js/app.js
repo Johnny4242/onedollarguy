@@ -2,9 +2,14 @@
 //  One Dollar Guy — MAIN APP
 //  Handles language selection, donation flow, counter, popups, FAQ, sharing.
 //
-//  Translations live in /i18n/*.json. Czech (cs.json) is the source of truth
-//  (= "výchozí jazyk"). If a requested language file is missing or fails to
-//  load, the UI falls back to cs.json.
+//  Překlady leží v /i18n/*.json. Čeština (cs.json) je zdroj pravdy a fallback.
+//  Každá země má svůj vlastní xx.json — platební brány a měnu si diktuje sama.
+//
+//  Co se NEPŘEKLÁDÁ nikdy: "ONE DOLLAR GUY", "FAQ", "#PER ASPERA AD ASTRA",
+//  názvy sociálních sítí (Instagram, X, Facebook, WhatsApp) a názvy platebních
+//  bran (PayPal, Apple Pay, Google Pay, …). Tyto názvy jsou napevno v HTML,
+//  resp. v poli `methods` v každém .json (kde u nepřekládaných je `name`
+//  stejné napříč jazyky).
 // ═══════════════════════════════════════════════════════════════════════════
 
 const GOAL = 8200000000;
@@ -15,26 +20,78 @@ let amt      = 1;
 let pay      = 'card';
 let donCount = 12847;
 
-// in-memory translation cache: { cs: {...}, en: {...}, ... }
-const T   = {};
-const FAQ = {};
+// in-memory caches: { cs: {...}, en: {...}, ... }
+const T        = {};   // ui strings
+const FAQ      = {};   // faq arrays
+const PAYMENT  = {};   // payment config (currency, symbol, methods, …)
+const TERMS    = {};   // terms body paragraphs (array)
+const langPromises = {};   // de-dupe concurrent loads of the same file
+
+// Minimální "nouzové" defaulty — používají se, jen kdyby selhal i cs.json.
+// Díky tomu se stránka nerozbije ani bez překladového souboru.
+const FALLBACK = {
+    cur: 'USD', sym: '$', pre: true, a: [1, 5, 10],
+    ey: '', h1a: 'Give me', h1b: 'one', h1c: 'dollar.',
+    tag: '', sub: '',
+    meta: 'people so far', pct: '{p}% of humanity',
+    sl1: 'Donors', sl2: 'Countries', sl3: 'Today',
+    s1: 'Pick an amount', c1: 'USD · classic', c5: 'USD · middle', c10: 'USD · hero',
+    co: '∞', coc: 'your call',
+    s2: 'Choose payment method',
+    s3: 'Leave a message', msghint: '',
+    s4: 'Send', legal: 'It\'s a gift. <span class="tl" onclick="openT(event)">Read terms.</span>',
+    btn: 'Send {a}', sec: 'Secure payment',
+    sTitle: 'Thank you.', sSub: '',
+    abt: '', ap1: '', ap2: '', ap3: '', ap4: '', ap5: '',
+    badge: 'Anonymous', tmt: 'Terms', ft: '© onedollarguy.com',
+    // new keys
+    nav_lang: 'language', nav_share: 'share',
+    share_title: 'Share', close_title: 'Close',
+    astra_q: '?what does it mean?',
+    astra_a: '„through hardships<br>to the stars"',
+    kontakt_btn: 'contact',
+    kontakt_msg: 'I prefer to stay anonymous — if you still want to reach out, here is my email:',
+    share_tweet: 'I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Join in!',
+    ft_privacy: 'Privacy', ft_soon: '(soon)'
+};
+
+const FALLBACK_METHODS = [
+    { id: 'card',     icon: '💳', name: 'Card' },
+    { id: 'transfer', icon: '🏦', name: 'Transfer' }
+];
 
 // ── i18n loading ─────────────────────────────────────────────────────────────
 
-// fetch a single JSON file; returns null on failure
-async function loadLang(code) {
-    if (T[code]) return T[code]; // cached
-    try {
-        const res = await fetch(`i18n/${code}.json`, { cache: 'no-cache' });
-        if (!res.ok) return null;
-        const data = await res.json();
-        T[code]   = data.ui  || data;        // main UI strings
-        FAQ[code] = data.faq || [];          // FAQ array
-        return T[code];
-    } catch (e) {
-        console.warn(`[i18n] Failed to load ${code}.json:`, e);
+// Načte xx.json. Vrací vždy Promise<object|null> (nikdy netrhá).
+// - deduplikuje souběžná volání pro stejný kód
+// - při síťové chybě udělá jeden retry po 400 ms
+function loadLang(code) {
+    if (T[code]) return Promise.resolve(T[code]);
+    if (langPromises[code]) return langPromises[code];
+
+    langPromises[code] = (async () => {
+        const url = `i18n/${code}.json`;
+        for (let attempt = 1; attempt <= 2; attempt++) {
+            try {
+                const res = await fetch(url, { cache: 'no-cache' });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                const data = await res.json();
+                T[code]       = data.ui      || {};
+                FAQ[code]     = data.faq     || [];
+                PAYMENT[code] = data.payment || {};
+                TERMS[code]   = data.terms   || [];
+                return T[code];
+            } catch (e) {
+                console.warn(`[i18n] load ${code}.json attempt ${attempt} failed:`, e);
+                if (attempt < 2) await new Promise(r => setTimeout(r, 400));
+            }
+        }
+        // smažeme promise, aby příští pokus mohl zkusit znovu
+        delete langPromises[code];
         return null;
-    }
+    })();
+
+    return langPromises[code];
 }
 
 // preload Czech on boot — it is our fallback base
@@ -45,9 +102,9 @@ async function bootI18n() {
 // ── language switch ──────────────────────────────────────────────────────────
 
 async function go(l) {
-    // make sure base (cs) is loaded
+    // make sure base (cs) is loaded — pokud selhalo, apply() použije FALLBACK
     if (!T.cs) await loadLang('cs');
-    // try to load requested lang; if it fails, stay with cs
+    // try to load requested lang; if it fails, zůstaneme u cs
     if (l !== 'cs') await loadLang(l);
 
     lang = T[l] ? l : 'cs';
@@ -61,71 +118,169 @@ async function go(l) {
     document.getElementById('clbl').textContent = lang.toUpperCase();
 }
 
-// merged translation object: cs (base) overridden by selected lang
+// Merged translation object: FALLBACK ← cs ← selected lang.
+// Díky FALLBACK nikdy nevrátí prázdno, i kdyby se nic nenačetlo.
 function tr() {
-    return { ...(T.cs || {}), ...(T[lang] || {}) };
+    return Object.assign({}, FALLBACK, T.cs || {}, T[lang] || {});
+}
+
+// Vrátí platební metody pro aktuální jazyk (s fallbackem na cs a pak na default).
+function paymentMethods() {
+    const p = PAYMENT[lang] || PAYMENT.cs || {};
+    const m = Array.isArray(p.methods) ? p.methods : null;
+    // Starý formát ["card","transfer"] → přepočet na objekty (zpětná kompatibilita)
+    if (m && m.length && typeof m[0] === 'string') {
+        return m.map(id => ({ id, icon: '', name: id }));
+    }
+    return m && m.length ? m : FALLBACK_METHODS;
 }
 
 // ── apply translations to DOM ───────────────────────────────────────────────
 
+function setText(id, val) {
+    const el = document.getElementById(id);
+    if (el && val != null) el.textContent = val;
+}
+function setHtml(id, val) {
+    const el = document.getElementById(id);
+    if (el && val != null) el.innerHTML = val;
+}
+function setTitle(id, val) {
+    const el = document.getElementById(id);
+    if (el && val != null) el.title = val;
+}
+
 function apply() {
     const t = tr();
-    const s = id => document.getElementById(id);
 
-    s('eyebrow-t').textContent = t.ey;
+    setText('eyebrow-t', t.ey);
     applyFaq(lang);
 
-    s('h1a').textContent = t.h1a;
-    s('h1b').textContent = t.h1b;
-    s('h1c').textContent = t.h1c;
-    s('hero-sub').innerHTML = t.sub;
-    if (s('hero-tag') && t.tag) s('hero-tag').innerHTML = t.tag;
+    setText('h1a', t.h1a);
+    setText('h1b', t.h1b);
+    setText('h1c', t.h1c);
+    setHtml('hero-sub', t.sub);
+    setHtml('hero-tag', t.tag);
 
     // amounts in current currency
-    s('av1').textContent  = t.a[0];
-    s('av5').textContent  = t.a[1];
-    s('av10').textContent = t.a[2];
-    s('lc1').textContent  = t.cur + ' · ' + (t.c1 ? (t.c1.split('·')[1] || 'classic') : 'classic').trim();
-    s('lc5').textContent  = t.cur + ' · ' + (t.c5 ? (t.c5.split('·')[1] || 'coffee')  : 'coffee').trim();
-    s('lc10').textContent = t.cur + ' · ' + (t.c10 ? (t.c10.split('·')[1] || 'hero')  : 'hero').trim();
-    s('lcoc').textContent = t.coc || 'your call';
-    s('csym').textContent = t.sym;
-    amt = t.a[0];
+    const a = Array.isArray(t.a) ? t.a : FALLBACK.a;
+    setText('av1',  a[0]);
+    setText('av5',  a[1]);
+    setText('av10', a[2]);
+    setText('lc1',  t.cur + ' · ' + (t.c1  ? (t.c1.split('·')[1]  || 'classic').trim() : 'classic'));
+    setText('lc5',  t.cur + ' · ' + (t.c5  ? (t.c5.split('·')[1]  || 'middle').trim()  : 'middle'));
+    setText('lc10', t.cur + ' · ' + (t.c10 ? (t.c10.split('·')[1] || 'hero').trim()    : 'hero'));
+    setText('lcoc', t.coc);
+    setText('csym', t.sym);
+    amt = a[0];
 
     // counter
-    s('cmeta').textContent = t.meta;
-    s('cpct').textContent  = t.pct.replace('{p}', ((donCount / GOAL) * 100).toFixed(5));
-    s('sdon').textContent  = donCount.toLocaleString();
-    s('sl1').textContent   = t.sl1;
-    s('sl2').textContent   = t.sl2;
-    s('sl3').textContent   = t.sl3;
+    setText('cmeta', t.meta);
+    setText('cpct',  (t.pct || '').replace('{p}', ((donCount / GOAL) * 100).toFixed(5)));
+    setText('sdon',  donCount.toLocaleString());
+    setText('sl1', t.sl1);
+    setText('sl2', t.sl2);
+    setText('sl3', t.sl3);
 
     // sections
-    s('s1t').textContent = t.s1;
-    s('s2t').textContent = t.s2;
-    s('s3t').textContent = t.s3;
-    s('s4t').textContent = t.s4;
+    setText('s1t', t.s1);
+    setText('s2t', t.s2);
+    setText('s3t', t.s3);
+    setText('s4t', t.s4);
 
-    s('plcard').textContent     = t.pc;
-    s('pltransfer').textContent = t.ptr;
-    s('msghint').textContent    = t.msghint;
-    s('ltxt').innerHTML         = t.legal;
-    s('csub').textContent       = t.sec;
+    // payment grid — generujeme dynamicky z dat aktuálního jazyka
+    renderPaymentMethods();
 
-    s('stit').textContent  = t.sTitle;
-    s('ssub').textContent  = t.sSub;
-    s('abtit').textContent = t.abt;
+    setText('msghint', t.msghint);
+    setHtml('ltxt',    t.legal);
+    setText('csub',    t.sec);
 
-    s('ap1').innerHTML   = t.ap1;
-    s('ap2').textContent = t.ap2;
-    s('ap3').textContent = t.ap3;
-    s('ap4').innerHTML   = t.ap4;
-    s('ap5').textContent = t.ap5;
+    setText('stit',  t.sTitle);
+    setText('ssub',  t.sSub);
+    setText('abtit', t.abt);
 
-    s('tmtit').textContent = t.tmt;
-    s('ftxt').textContent  = t.ft;
+    setHtml('ap1', t.ap1);
+    setText('ap2', t.ap2);
+    setText('ap3', t.ap3);
+    setHtml('ap4', t.ap4);
+    setText('ap5', t.ap5);
+
+    setText('tmtit', t.tmt);
+    setText('ftxt',  t.ft);
+
+    // nav
+    setText('nav-lang',  t.nav_lang);
+    setText('nav-share', t.nav_share);
+    setTitle('nav-share-btn', t.share_title);
+
+    // success close button tooltip
+    setTitle('succ-close-btn', t.close_title);
+
+    // astra popup (obsah se PŘEKLÁDÁ; samotný nápis #PER ASPERA AD ASTRA zůstává latinsky)
+    setText('astra-q', t.astra_q);
+    setHtml('astra-a', t.astra_a);
+
+    // kontakt
+    setText('kontakt-btn-text', t.kontakt_btn);
+    setHtml('kontakt-msg',      t.kontakt_msg);
+
+    // footer odkazy (sociální sítě zůstávají napevno, "(soon)" a odkazy Terms/Privacy se překládají)
+    setText('fttr',    t.tmt);         // "Terms"
+    setText('ftpr',    t.ft_privacy);  // "Privacy"
+    setText('ft-soon', t.ft_soon);     // "(soon)"
+
+    // terms modal body (pokud je v daném jazyce)
+    renderTerms();
 
     updBtn();
+}
+
+// ── payment methods rendering ───────────────────────────────────────────────
+
+function renderPaymentMethods() {
+    const grid = document.getElementById('pgrid');
+    if (!grid) return;
+    const methods = paymentMethods();
+
+    // Pokud stávající vybraná metoda není v seznamu nové země, přepneme na první.
+    const ids = methods.map(m => m.id);
+    if (!ids.includes(pay)) pay = ids[0] || 'card';
+
+    grid.innerHTML = '';
+    methods.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = 'pt' + (m.id === pay ? ' on' : '');
+        btn.setAttribute('data-p', m.id);
+        btn.addEventListener('click', () => pickPay(m.id, btn));
+
+        const icon = document.createElement('span');
+        icon.className = 'pi';
+        icon.textContent = m.icon || '';
+        btn.appendChild(icon);
+
+        const label = document.createElement('span');
+        label.className = 'pl';
+        label.textContent = m.name || m.id;
+        btn.appendChild(label);
+
+        grid.appendChild(btn);
+    });
+}
+
+// ── terms modal body ────────────────────────────────────────────────────────
+
+function renderTerms() {
+    const body = document.getElementById('tmbody');
+    if (!body) return;
+    const list = TERMS[lang] || TERMS.cs;
+    if (!Array.isArray(list) || !list.length) return; // nechá původní HTML obsah
+    body.innerHTML = '';
+    list.forEach((txt, i) => {
+        const p = document.createElement('p');
+        p.className = 'mp';
+        p.innerHTML = `<b>${i + 1}.</b> ${txt}`;
+        body.appendChild(p);
+    });
 }
 
 // ── counter animation + idle ticker ─────────────────────────────────────────
@@ -149,7 +304,7 @@ function animCtr() {
             document.getElementById('camt').textContent = donCount.toLocaleString();
             document.getElementById('sdon').textContent = donCount.toLocaleString();
             const t = tr();
-            document.getElementById('cpct').textContent = t.pct.replace('{p}', ((donCount / GOAL) * 100).toFixed(5));
+            document.getElementById('cpct').textContent = (t.pct || '').replace('{p}', ((donCount / GOAL) * 100).toFixed(5));
             const td = document.getElementById('stoday');
             td.textContent = '+' + (parseInt(td.textContent.replace('+', '')) + add);
         }
@@ -183,7 +338,7 @@ function custCh() {
 
 function pickPay(p, el) {
     document.querySelectorAll('.pt').forEach(b => b.classList.remove('on'));
-    el.classList.add('on');
+    if (el) el.classList.add('on');
     pay = p;
 }
 
@@ -192,7 +347,7 @@ function updBtn() {
     const ok = document.getElementById('lcb').checked && amt !== '?';
     document.getElementById('cbtn').disabled = !ok;
     const display = amt === '?' ? '?' : (t.pre ? t.sym + ' ' + amt : amt + ' ' + t.sym);
-    document.getElementById('cbtn-t').textContent = t.btn.replace('{a}', display);
+    document.getElementById('cbtn-t').textContent = (t.btn || 'Send {a}').replace('{a}', display);
 }
 
 function updMsgHint() {
@@ -205,7 +360,6 @@ function openT(e) {
 }
 
 function resetForm() {
-    // Only uncheck the legal checkbox — keep amount and payment method
     document.getElementById('lcb').checked = false;
     document.getElementById('cbtn').style.display = '';
     document.getElementById('cbtn').disabled = true;
@@ -225,7 +379,6 @@ function doSubmit() {
         document.getElementById('succ').classList.add('on');
         document.getElementById('succ').scrollIntoView({ behavior: 'smooth', block: 'center' });
         if (window.launchConfetti) launchConfetti();
-        // No auto-reset — stays open until user closes with X
     }, 1400);
 }
 
@@ -249,8 +402,9 @@ function share(p) {
         }
         return;
     }
-    // Success window buttons — full text
-    const successTxt = 'Právě jsem dal One Dollar Guyovi příspěvek. Zbývá 8,2 miliardy. ' + url + ' Pojď pomoci taky!';
+    // Success window buttons — full localized text
+    const t = tr();
+    const successTxt = (t.share_tweet || FALLBACK.share_tweet).replace('{url}', url);
     const urls = {
         x:  `https://twitter.com/intent/tweet?text=${encodeURIComponent(successTxt)}`,
         ig: `https://www.instagram.com/`,
@@ -294,6 +448,13 @@ function applyFaq(l) {
         if (q) q.textContent = qa[0];
         if (a) a.innerHTML   = qa[1];
     });
+}
+
+// ── nav buttons ──────────────────────────────────────────────────────────────
+
+function goToLangScreen() {
+    document.getElementById('lang-screen').style.display = 'flex';
+    document.getElementById('page').style.display = 'none';
 }
 
 // ── boot ─────────────────────────────────────────────────────────────────────

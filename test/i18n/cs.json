@@ -15,7 +15,13 @@
     "symbol": "Kč",
     "symbolBeforeAmount": false,
     "defaultAmounts": [25, 100, 500],
-    "methods": ["card", "transfer"]
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Karta" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "transfer", "icon": "🏦", "name": "Převod" },
+      { "id": "qr",       "icon": "▦",  "name": "QR platba" }
+    ]
   },
 
   "ui": {
@@ -39,15 +45,13 @@
     "sl3": "Dnes",
 
     "s1": "Vyber částku",
-    "c1": "Kč · klasika",
-    "c5": "Kč · střed",
-    "c10": "Kč · hrdina",
+    "c1": "CZK · klasika",
+    "c5": "CZK · střed",
+    "c10": "CZK · hrdina",
     "co": "∞",
     "coc": "tvoje volba",
 
     "s2": "Vyber způsob platby",
-    "pc": "Karta",
-    "ptr": "Převod",
 
     "s3": "Nech mi vzkaz (nepovinné)",
     "msghint": "Čtu každý jeden",
@@ -69,8 +73,35 @@
 
     "badge": "Anonymní",
     "tmt": "Podmínky",
-    "ft": "© onedollarguy.com"
+    "ft": "© onedollarguy.com · Není to charita · Pouze osobní dary",
+
+    "nav_lang": "jazyk",
+    "nav_share": "sdílet",
+    "share_title": "Sdílet",
+    "close_title": "Zavřít",
+
+    "astra_q": "?co to znamená?",
+    "astra_a": "„přes překážky<br>ke hvězdám\"",
+
+    "kontakt_btn": "kontakt",
+    "kontakt_msg": "Přeji si zůstat v anonymitě — přesto pokud mě chceš kontaktovat, zde je můj mail:",
+
+    "share_tweet": "Právě jsem dal One Dollar Guyovi příspěvek. Zbývá 8,2 miliardy. {url} Pojď pomoci taky!",
+
+    "ft_privacy": "Soukromí",
+    "ft_soon": "(brzy)"
   },
+
+  "terms": [
+    "Dáváš dar. Nic nekupuješ. Za to dostaneš jen poděkování.",
+    "Dar je definitivní. Bez vrácení. Bez chargebacku. Bez „rozmyslel jsem si to\".",
+    "Dárce potvrzuje, že peníze pocházejí z legálních zdrojů a nezatěžují je práva třetích stran.",
+    "Dárce dobrovolně převádí vlastnictví částky na příjemce, který ji s vděkem přijímá.",
+    "Žádný nátlak. Dárce jedná ze své vlastní vůle, plně vědom toho, co dělá.",
+    "Dárce je 18+ (nebo plnoletý podle zákonů své země).",
+    "Není to charita, veřejná sbírka ani investice. Je to osobní dar fyzické osobě.",
+    "Řídí se českým právem."
+  ],
 
   "faq": [
     [
@@ -79,7 +110,7 @@
     ],
     [
       "Proč bych ti měl vůbec dát dollar?",
-      "Nemusíš. Nikdo tě nenutí. Ale přemýšlej\u00a0— <b>kdys naposledy udělal něco, co tě prakticky nic nestálo, ale někomu to mohlo dát naději?</b> Jeden "dollar" - ideálně více 😄. Je to na tobě. Já ti mohu pouze poděkovat."
+      "Nemusíš. Nikdo tě nenutí. Ale přemýšlej\u00a0— <b>kdys naposledy udělal něco, co tě prakticky nic nestálo, ale někomu to mohlo dát naději?</b> Jeden \"dollar\" - ideálně více 😄. Je to na tobě. Já ti mohu pouze poděkovat."
     ],
     [
       "Co s těmi penězi uděláš?",

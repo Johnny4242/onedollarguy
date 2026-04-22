@@ -11,12 +11,19 @@
   },
 
   "payment": {
-    "_comment": "Konfigurace platby. currency = ISO 4217. symbolBeforeAmount: true = '$1', false = '25 Kč'. defaultAmounts = 3 přednastavené částky v tomto fiatu.",
+    "_comment": "Konfigurace platby PRO TUTO ZEMI. currency = ISO 4217. symbolBeforeAmount: true = '$1', false = '25 Kč'. defaultAmounts = 3 přednastavené částky v tomto fiatu.",
+    "_comment_methods": "methods = pole objektů {id, icon, name}. Každá země má VLASTNÍ platební brány. Názvy BRAND bran (PayPal, Apple Pay, Google Pay…) jsou napříč jazyky STEJNÉ — nepřekládají se. Obecné názvy (Karta/Card, Převod/Transfer) se přeloží pro daný jazyk. Stávající podporovaná id: card, applepay, gpay, paypal, transfer, qr, crypto. Přidat další je snadné — JS je jen vyrenderuje podle tohoto pole.",
     "currency": "XXX",
     "symbol": "X",
     "symbolBeforeAmount": true,
     "defaultAmounts": [1, 5, 10],
-    "methods": ["card", "transfer"]
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Card (přelož)" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "paypal",   "icon": "🅿",  "name": "PayPal" },
+      { "id": "transfer", "icon": "🏦", "name": "Transfer (přelož)" }
+    ]
   },
 
   "ui": {
@@ -41,7 +48,7 @@
     "sl2": "Countries",
     "sl3": "Today",
 
-    "_comment_step1": "Krok 1 — výběr částky. c1/c5/c10 jsou popisky tří tlačítek ve tvaru 'MĚNA · popis'. Důležité: backend z nich používá jen část za '·'.",
+    "_comment_step1": "Krok 1 — výběr částky. c1/c5/c10 jsou popisky tří tlačítek ve tvaru 'MĚNA · popis'. Důležité: JS používá jen část za '·'.",
     "s1": "Pick an amount",
     "c1": "USD · classic",
     "c5": "USD · middle",
@@ -49,10 +56,8 @@
     "co": "∞",
     "coc": "your call",
 
-    "_comment_step2": "Krok 2 — způsob platby.",
+    "_comment_step2": "Krok 2 — nadpis 'Zvol způsob platby'. Názvy jednotlivých bran jsou v payment.methods výše.",
     "s2": "Choose payment method",
-    "pc": "Card",
-    "ptr": "Transfer",
 
     "_comment_step3": "Krok 3 — vzkaz.",
     "s3": "Leave me a message (optional)",
@@ -76,12 +81,46 @@
     "ap4": "Odstavec 4 s <b>tučným</b>.",
     "ap5": "Odstavec 5.",
 
-    "_comment_footer": "Badge = štítek u zprávy od anonymního dárce. tmt = název tlačítka 'Podmínky'. ft = footer.",
+    "_comment_footer": "Badge = štítek u zprávy od anonymního dárce. tmt = název tlačítka 'Podmínky' (používá se i v patičce). ft = footer s copyrightem.",
     "badge": "Anonymous",
     "tmt": "Terms",
-    "ft": "© onedollarguy.com"
+    "ft": "© onedollarguy.com · Not a charity · Personal gifts only",
+
+    "_comment_nav": "Tlačítka v horní liště. nav_lang = text 'jazyk/language'. nav_share = text 'sdílet/share'. share_title/close_title = tooltipy.",
+    "nav_lang": "language",
+    "nav_share": "share",
+    "share_title": "Share",
+    "close_title": "Close",
+
+    "_comment_astra": "Nápis #PER ASPERA AD ASTRA se NEPŘEKLÁDÁ (zůstává latinsky). Ale obsah popup okénka po kliknutí PŘELOŽIT — to je překlad motta.",
+    "astra_q": "?what does it mean?",
+    "astra_a": "„through hardships<br>to the stars\"",
+
+    "_comment_kontakt": "Tlačítko 'kontakt' vpravo dole a text v popup okně. E-mailovou adresu v HTML měnit nemusíš.",
+    "kontakt_btn": "contact",
+    "kontakt_msg": "I prefer to stay anonymous — but if you still want to reach out, here is my email:",
+
+    "_comment_share_tweet": "Text, který se sdílí na X/Facebook/WhatsApp po úspěšném daru. {url} se nahrazuje adresou webu.",
+    "share_tweet": "I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Join in!",
+
+    "_comment_footer_links": "Odkazy v patičce. ft_privacy = 'Privacy/Soukromí'. ft_soon = '(soon)/(brzy)' — používá se u Instagramu.",
+    "ft_privacy": "Privacy",
+    "ft_soon": "(soon)"
   },
 
+  "_comment_terms": "Pole odstavců s podmínkami. JS je vyrenderuje v modálu v pořadí 1., 2., 3., … Pokud tohle pole chybí nebo je prázdné, použije se HTML obsah jako fallback (neaktivní).",
+  "terms": [
+    "Odstavec 1.",
+    "Odstavec 2.",
+    "Odstavec 3.",
+    "Odstavec 4.",
+    "Odstavec 5.",
+    "Odstavec 6.",
+    "Odstavec 7.",
+    "Odstavec 8."
+  ],
+
+  "_comment_faq": "Pole 5 dvojic [otázka, odpověď]. Odpověď smí obsahovat HTML (<b>, \\n pro odstavce).",
   "faq": [
     ["Otázka 1", "Odpověď 1. Může obsahovat <b>HTML</b>."],
     ["Otázka 2", "Odpověď 2."],

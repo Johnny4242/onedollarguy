@@ -293,7 +293,7 @@
                 <a href="https://facebook.com" target="_blank" id="ftfb">Facebook</a> ·
                 <a href="#" id="ftig">Instagram <span id="ft-soon">(soon)</span></a> ·
                 <a href="#" onclick="openT(event)" id="fttr">Terms</a> ·
-                <a href="#" id="ftpr">Privacy</a>
+                <a href="#" onclick="openP(event)" id="ftpr">Privacy</a>
             </div>
             <div style="margin-top:10px" id="ftxt">© onedollarguy.com · Not a charity · Personal gifts only</div>
         </footer>
@@ -309,28 +309,21 @@
         </div>
     </div>
 
-    <!-- TERMS MODAL -->
+    <!-- TERMS MODAL (obsah se lazy-loadne z /legal/terms.md) -->
     <div class="mbg" id="tmod">
-        <div class="mbox">
+        <div class="mbox mbox-lg">
             <button class="mcl" onclick="document.getElementById('tmod').classList.remove('on')">✕</button>
-            <div class="mtit" id="tmtit">The Terms</div>
-            <div id="tmbody">
-                <p class="mp"><b>1.</b> You are giving a gift. Not buying anything. You receive nothing in return except
-                    a thank
-                    you.</p>
-                <p class="mp"><b>2.</b> The gift is final. No refunds. No chargebacks. No "I changed my mind."</p>
-                <p class="mp"><b>3.</b> The donor confirms the funds come from legal sources, free of third-party
-                    rights.</p>
-                <p class="mp"><b>4.</b> The donor freely transfers ownership of the amount to the recipient, who
-                    gratefully
-                    accepts.</p>
-                <p class="mp"><b>5.</b> No pressure was applied. The donor acts of their own free will, fully aware.</p>
-                <p class="mp"><b>6.</b> The donor is 18+ (or legal age in their country).</p>
-                <p class="mp"><b>7.</b> This is not a charity, not a public fundraiser, not an investment. It's a
-                    personal gift
-                    to a private individual.</p>
-                <p class="mp"><b>8.</b> Governed by Czech law.</p>
-            </div>
+            <div class="mtit" id="tmtit">Terms</div>
+            <div id="tmbody"></div>
+        </div>
+    </div>
+
+    <!-- PRIVACY MODAL (obsah se lazy-loadne z /legal/privacy.md) -->
+    <div class="mbg" id="pmod">
+        <div class="mbox mbox-lg">
+            <button class="mcl" onclick="document.getElementById('pmod').classList.remove('on')">✕</button>
+            <div class="mtit" id="pmtit">Privacy</div>
+            <div id="pmbody"></div>
         </div>
     </div>
 

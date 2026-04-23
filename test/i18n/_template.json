@@ -105,20 +105,13 @@
 
     "_comment_footer_links": "Odkazy v patičce. ft_privacy = 'Privacy/Soukromí'. ft_soon = '(soon)/(brzy)' — používá se u Instagramu.",
     "ft_privacy": "Privacy",
-    "ft_soon": "(soon)"
-  },
+    "ft_soon": "(soon)",
 
-  "_comment_terms": "Pole odstavců s podmínkami. JS je vyrenderuje v modálu v pořadí 1., 2., 3., … Pokud tohle pole chybí nebo je prázdné, použije se HTML obsah jako fallback (neaktivní).",
-  "terms": [
-    "Odstavec 1.",
-    "Odstavec 2.",
-    "Odstavec 3.",
-    "Odstavec 4.",
-    "Odstavec 5.",
-    "Odstavec 6.",
-    "Odstavec 7.",
-    "Odstavec 8."
-  ],
+    "_comment_legal": "Titulek modálu 'Zásady ochrany osobních údajů'. Tlačítko Terms používá klíč `tmt` výše. legal_loading = text zobrazený, dokud se MD nenačte. legal_error = chyba při stažení.",
+    "pmt": "Privacy Policy",
+    "legal_loading": "Loading…",
+    "legal_error": "Could not load the document. Please try again."
+  },
 
   "_comment_faq": "Pole 5 dvojic [otázka, odpověď]. Odpověď smí obsahovat HTML (<b>, \\n pro odstavce).",
   "faq": [

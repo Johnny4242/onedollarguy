@@ -89,19 +89,12 @@
     "share_tweet": "Právě jsem dal One Dollar Guyovi příspěvek. Zbývá 8,2 miliardy. {url} Pojď pomoci taky!",
 
     "ft_privacy": "Soukromí",
-    "ft_soon": "(brzy)"
-  },
+    "ft_soon": "(brzy)",
 
-  "terms": [
-    "Dáváš dar. Nic nekupuješ. Za to dostaneš jen poděkování.",
-    "Dar je definitivní. Bez vrácení. Bez chargebacku. Bez „rozmyslel jsem si to\".",
-    "Dárce potvrzuje, že peníze pocházejí z legálních zdrojů a nezatěžují je práva třetích stran.",
-    "Dárce dobrovolně převádí vlastnictví částky na příjemce, který ji s vděkem přijímá.",
-    "Žádný nátlak. Dárce jedná ze své vlastní vůle, plně vědom toho, co dělá.",
-    "Dárce je 18+ (nebo plnoletý podle zákonů své země).",
-    "Není to charita, veřejná sbírka ani investice. Je to osobní dar fyzické osobě.",
-    "Řídí se českým právem."
-  ],
+    "pmt": "Zásady ochrany osobních údajů",
+    "legal_loading": "Načítám…",
+    "legal_error": "Dokument se nepodařilo načíst. Zkuste to prosím znovu."
+  },
 
   "faq": [
     [

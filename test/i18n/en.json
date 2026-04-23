@@ -89,19 +89,12 @@
     "share_tweet": "I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Join in!",
 
     "ft_privacy": "Privacy",
-    "ft_soon": "(soon)"
-  },
+    "ft_soon": "(soon)",
 
-  "terms": [
-    "You are giving a gift. Not buying anything. You receive nothing in return except a thank you.",
-    "The gift is final. No refunds. No chargebacks. No \"I changed my mind.\"",
-    "The donor confirms the funds come from legal sources, free of third-party rights.",
-    "The donor freely transfers ownership of the amount to the recipient, who gratefully accepts.",
-    "No pressure was applied. The donor acts of their own free will, fully aware.",
-    "The donor is 18+ (or legal age in their country).",
-    "This is not a charity, not a public fundraiser, not an investment. It's a personal gift to a private individual.",
-    "Governed by Czech law."
-  ],
+    "pmt": "Privacy Policy",
+    "legal_loading": "Loading…",
+    "legal_error": "Could not load the document. Please try again."
+  },
 
   "faq": [
     [

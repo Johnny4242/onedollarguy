@@ -24,7 +24,6 @@ let donCount = 12847;
 const T        = {};   // ui strings
 const FAQ      = {};   // faq arrays
 const PAYMENT  = {};   // payment config (currency, symbol, methods, …)
-const TERMS    = {};   // terms body paragraphs (array)
 const langPromises = {};   // de-dupe concurrent loads of the same file
 
 // Minimální "nouzové" defaulty — používají se, jen kdyby selhal i cs.json.
@@ -79,7 +78,6 @@ function loadLang(code) {
                 T[code]       = data.ui      || {};
                 FAQ[code]     = data.faq     || [];
                 PAYMENT[code] = data.payment || {};
-                TERMS[code]   = data.terms   || [];
                 return T[code];
             } catch (e) {
                 console.warn(`[i18n] load ${code}.json attempt ${attempt} failed:`, e);
@@ -229,8 +227,8 @@ function apply() {
     setText('ftpr',    t.ft_privacy);  // "Privacy"
     setText('ft-soon', t.ft_soon);     // "(soon)"
 
-    // terms modal body (pokud je v daném jazyce)
-    renderTerms();
+    // Privacy modal title
+    setText('pmtit', t.pmt);
 
     updBtn();
 }
@@ -267,20 +265,179 @@ function renderPaymentMethods() {
     });
 }
 
-// ── terms modal body ────────────────────────────────────────────────────────
+// ── legal documents (Terms, Privacy) ────────────────────────────────────────
+//
+//  Právní texty jsou UNIVERZÁLNÍ napříč zeměmi — leží v /legal/*.md jako jeden
+//  markdown soubor na dokument, obsahující obě jazykové verze (EN + CS).
+//  Na kliknutí tlačítka se soubor lazy-loadne, rozdělí na jazykové sekce a
+//  vykreslí se ta, která odpovídá aktuálnímu jazyku (CS pro češtinu, jinak EN).
+//
+//  Tlačítko / popisek / titulek modálu se ale překládá normálně přes klíče
+//  `tmt` (Terms) a `pmt` (Privacy).
 
-function renderTerms() {
-    const body = document.getElementById('tmbody');
+const LEGAL_CACHE = {};   // { "terms:en": "<html…>", "terms:cs": "<html…>", … }
+const LEGAL_FILES = { terms: 'legal/terms.md', privacy: 'legal/privacy.md' };
+
+// Markery, podle kterých poznáme začátek jazykové sekce v MD souboru.
+// Pokud se v dokumentu změní emoji/formulace, stačí upravit sem.
+const LEGAL_EN_MARK = '# 🇬🇧 ENGLISH VERSION';
+const LEGAL_CS_MARK = '# 🇨🇿 ČESKÁ VERZE';
+const LEGAL_END_MARK = '**End of document / Konec dokumentu**';
+
+// Vrátí kód jazyka, ve kterém text ukážeme: cs, když se stránka překládá do
+// češtiny; pro všechny ostatní jazyky použijeme angličtinu.
+function legalLangFor(l) {
+    return l === 'cs' ? 'cs' : 'en';
+}
+
+// Z celého MD dokumentu vytáhne jen sekci daného jazyka (bez preambule a bez
+// vývojářského ⚠️ bloku). Vrací string (markdown bez obalu).
+function extractLangSection(md, wantLang) {
+    const iEn = md.indexOf(LEGAL_EN_MARK);
+    const iCs = md.indexOf(LEGAL_CS_MARK);
+    if (iEn < 0 || iCs < 0) return md; // fallback – struktura nesedí, ukážeme vše
+
+    const enText = md.slice(iEn + LEGAL_EN_MARK.length, iCs);
+    let csText = md.slice(iCs + LEGAL_CS_MARK.length);
+    const iEnd = csText.indexOf(LEGAL_END_MARK);
+    if (iEnd >= 0) csText = csText.slice(0, iEnd);
+
+    return (wantLang === 'cs' ? csText : enText).trim();
+}
+
+// Mini markdown → HTML parser. Schválně jen to, co je v našich právních textech:
+//   # / ## / ###, **tučné**, odrážky "- …", tabulky "| a | b |", vodorovné čáry
+//   "---", odstavce, automatické odkazy http(s):// a mailto:.
+//   Blockquotes "> …" se ZAHAZUJÍ (v originále slouží jen jako poznámka pro autora).
+function escHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function mdInline(s) {
+    s = escHtml(s);
+    // bold **…**
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    // italic *…* (mírná podpora; v těchto textech se moc nevyskytuje)
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
+    // auto-link url
+    s = s.replace(/(https?:\/\/[^\s<)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+    // auto-link email (jen když není už v <a>)
+    s = s.replace(/(?<!["'>])\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g, '<a href="mailto:$1">$1</a>');
+    return s;
+}
+
+function mdToHtml(md) {
+    const lines = md.split(/\r?\n/);
+    const out = [];
+    let i = 0;
+    let inList = false;
+    let para = [];
+
+    const flushPara = () => {
+        if (!para.length) return;
+        out.push('<p class="mp">' + para.map(mdInline).join(' ') + '</p>');
+        para = [];
+    };
+    const flushList = () => {
+        if (inList) { out.push('</ul>'); inList = false; }
+    };
+
+    while (i < lines.length) {
+        const line = lines[i];
+        const trimmed = line.trim();
+
+        // Přeskočíme vývojářské "> ⚠️" bloky — všechno, co začíná ">".
+        if (trimmed.startsWith('>')) { flushPara(); flushList(); i++; continue; }
+
+        // Prázdný řádek → konec odstavce/seznamu.
+        if (trimmed === '') { flushPara(); flushList(); i++; continue; }
+
+        // Vodorovná čára.
+        if (trimmed === '---' || trimmed === '***') {
+            flushPara(); flushList();
+            out.push('<hr>'); i++; continue;
+        }
+
+        // Nadpisy.
+        const h = /^(#{1,6})\s+(.+)$/.exec(trimmed);
+        if (h) {
+            flushPara(); flushList();
+            const lvl = Math.min(h[1].length, 4);
+            // h1 vypadá v modálu obrovský – posuneme všechno o 1 níž
+            const tag = 'h' + Math.min(lvl + 1, 5);
+            out.push(`<${tag} class="ml-h${lvl}">${mdInline(h[2])}</${tag}>`);
+            i++; continue;
+        }
+
+        // Tabulka – detekujeme sekvenci řádků `| … | … |`.
+        if (/^\|.*\|$/.test(trimmed)) {
+            flushPara(); flushList();
+            const rows = [];
+            while (i < lines.length && /^\|.*\|$/.test(lines[i].trim())) {
+                rows.push(lines[i].trim());
+                i++;
+            }
+            // Druhý řádek je separátor `|---|---|` – použije se jen k rozlišení hlavičky.
+            const hasHeader = rows.length >= 2 && /^\|[\s:|-]+\|$/.test(rows[1]);
+            out.push('<table class="ml-tbl"><tbody>');
+            rows.forEach((r, idx) => {
+                if (hasHeader && idx === 1) return;
+                const cells = r.slice(1, -1).split('|').map(c => c.trim());
+                const tag = (hasHeader && idx === 0) ? 'th' : 'td';
+                out.push('<tr>' + cells.map(c => `<${tag}>${mdInline(c)}</${tag}>`).join('') + '</tr>');
+            });
+            out.push('</tbody></table>');
+            continue;
+        }
+
+        // Odrážky.
+        if (/^-\s+/.test(trimmed)) {
+            flushPara();
+            if (!inList) { out.push('<ul class="ml-ul">'); inList = true; }
+            out.push('<li>' + mdInline(trimmed.replace(/^-\s+/, '')) + '</li>');
+            i++; continue;
+        }
+
+        // Běžný odstavec – sbíráme do pole, dokud nepřijde prázdný řádek.
+        flushList();
+        para.push(trimmed);
+        i++;
+    }
+    flushPara(); flushList();
+    return out.join('\n');
+}
+
+async function loadLegal(doc) {
+    const l = legalLangFor(lang);
+    const key = `${doc}:${l}`;
+    if (LEGAL_CACHE[key]) return LEGAL_CACHE[key];
+
+    const url = LEGAL_FILES[doc];
+    if (!url) return null;
+
+    for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+            const res = await fetch(url, { cache: 'no-cache' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const md = await res.text();
+            const sec = extractLangSection(md, l);
+            const html = mdToHtml(sec);
+            LEGAL_CACHE[key] = html;
+            return html;
+        } catch (e) {
+            console.warn(`[legal] load ${url} attempt ${attempt} failed:`, e);
+            if (attempt < 2) await new Promise(r => setTimeout(r, 400));
+        }
+    }
+    return null;
+}
+
+async function showLegal(doc, bodyId) {
+    const body = document.getElementById(bodyId);
     if (!body) return;
-    const list = TERMS[lang] || TERMS.cs;
-    if (!Array.isArray(list) || !list.length) return; // nechá původní HTML obsah
-    body.innerHTML = '';
-    list.forEach((txt, i) => {
-        const p = document.createElement('p');
-        p.className = 'mp';
-        p.innerHTML = `<b>${i + 1}.</b> ${txt}`;
-        body.appendChild(p);
-    });
+    const t = tr();
+    body.innerHTML = `<p class="mp">${t.legal_loading || 'Loading…'}</p>`;
+    const html = await loadLegal(doc);
+    body.innerHTML = html || `<p class="mp">${t.legal_error || 'Could not load document.'}</p>`;
 }
 
 // ── counter animation + idle ticker ─────────────────────────────────────────
@@ -357,6 +514,13 @@ function updMsgHint() {
 function openT(e) {
     if (e) e.preventDefault();
     document.getElementById('tmod').classList.add('on');
+    showLegal('terms', 'tmbody');
+}
+
+function openP(e) {
+    if (e) e.preventDefault();
+    document.getElementById('pmod').classList.add('on');
+    showLegal('privacy', 'pmbody');
 }
 
 function resetForm() {

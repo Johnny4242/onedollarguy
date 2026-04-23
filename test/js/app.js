@@ -528,7 +528,13 @@ function openP(e) {
     showLegal('privacy', 'pmbody');
 }
 
+// Kompletní reset vizuálního stavu stránky.
+// Volá se při přepnutí jazyka — uživatel má vidět stránku tak, jak ji poprvé
+// vidí po načtení: formulář vynulovaný, FAQ zavřené, žádné modály otevřené,
+// scroll na začátku.
 function resetForm() {
+    // ── formulář ─────────────────────────────────────────────────────────────
+
     // legal checkbox — KRITICKÉ: uživatel musí znovu potvrdit v novém jazyce
     const lcb = document.getElementById('lcb');
     if (lcb) lcb.checked = false;
@@ -561,6 +567,27 @@ function resetForm() {
     // úspěšný stav (pokud visel z předchozí platby) zavřít
     const succ = document.getElementById('succ');
     if (succ) succ.classList.remove('on');
+
+    // ── FAQ ──────────────────────────────────────────────────────────────────
+    // Zavřít všechny rozkliklé otázky (odstranit třídu .open).
+    document.querySelectorAll('.faq-item.open, [id^="faq"].open').forEach(el => el.classList.remove('open'));
+
+    // ── modály a popupy ──────────────────────────────────────────────────────
+    // Terms a Privacy modály.
+    ['tmod', 'pmod'].forEach(id => {
+        const m = document.getElementById(id);
+        if (m) m.classList.remove('on');
+    });
+    // Kontakt a Astra popupy (mají zvlášť overlay + pop).
+    ['kontakt-pop', 'kontakt-ov', 'astra-pop', 'astra-ov'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('on');
+    });
+
+    // ── scroll ───────────────────────────────────────────────────────────────
+    // Na začátek stránky, ať uživatel vidí web od hlavičky.
+    try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+    catch (e) { window.scrollTo(0, 0); }
 
     updBtn();
 }

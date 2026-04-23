@@ -1,17 +1,21 @@
 # ODG — Terms of Service / Podmínky užití
 
-**Version:** 1.0 / **Verze:** 1.0
+**Version:** 2.0 / **Verze:** 2.0
 **Effective date / Účinné od:** [DOPLŇ DATUM SPUŠTĚNÍ]
 **Last updated / Poslední aktualizace:** [DOPLŇ DATUM]
 
 ---
 
 > ⚠️ **UPOZORNĚNÍ PRO JANA PISKA**: Před publikováním:
-> 1. Nech projít advokátem specializovaným na IT/e-commerce (doporučujeme:
->    advokatura v Brně/Praze — Frank Bold, Havel & Partners, ROWAN LEGAL).
+> 1. Nech projít advokátem specializovaným na IT/e-commerce.
 > 2. Vlož reálné datum účinnosti.
 > 3. Ověř že kontaktní email existuje a je monitorován.
-> 4. Doplň případnou doménu.
+> 4. Doplň IČO (aktuálně placeholder "XXXXXXXX").
+> 5. Ověř stanoviskem daňového poradce konstrukci dle § 10 ZDP.
+>
+> **Klíčový právní princip této verze:** Příspěvky jsou DARY dle § 2055 OZ.
+> Přispěvatel NEDOSTÁVÁ ŽÁDNÉ PROTIPLNĚNÍ — žádný produkt, žádnou službu,
+> žádný certifikát, žádnou členskou výhodu. Nárok na vrácení NEVZNIKÁ.
 
 ---
 
@@ -22,179 +26,275 @@
 Welcome to ODG — One Dollar Guy (the "Platform"). These Terms of Service (the "Terms")
 govern your access to and use of the Platform operated by Jan Pisk (the "Operator").
 
+The Platform is a personal social experiment through which the Operator invites
+individuals worldwide to send a voluntary symbolic gift. **No products or services
+are sold. No benefits, rewards, or consideration of any kind are provided in
+exchange for a contribution.**
+
 By using the Platform or making a contribution, you agree to these Terms. If you do
 not agree, please do not use the Platform.
 
 ## 2. Definitions
 
-- **Platform**: The website, services and related digital content of ODG (One Dollar Guy),
+- **Platform**: The website and related digital content of ODG (One Dollar Guy),
   currently hosted at onedollarguy.com.
 - **Operator**: Jan Pisk, residing at Křížkovského 334/10, 674 01 Třebíč,
-  Czech Republic, contact: honzapisk@gmail.com.
+  Czech Republic, business ID (IČO): **XXXXXXXX**, contact: honzapisk@gmail.com.
 - **Contributor / User**: Any person who accesses the Platform or makes a contribution.
-- **Contribution**: A voluntary, non-reciprocal monetary gift made to the Operator
-  through the Platform.
-- **Certificate**: A personalized digital image featuring a unique sequential number
-  ("Citizen #X of 8,200,000,000"), provided as a symbolic acknowledgement.
+- **Contribution / Gift**: A voluntary, one-way, non-reciprocal monetary gift made
+  by the Contributor to the Operator through the Platform, pursuant to § 2055 et seq.
+  of the Czech Civil Code (Act No. 89/2012 Coll.).
 
-## 3. Nature of Contributions
+## 3. Nature of Contributions — Gift, Not Purchase
 
-**3.1.** The Platform enables voluntary contributions from individuals worldwide to
-the Operator. Contributions are pure gifts within the meaning of § 2055 and subsequent
-of Act No. 89/2012 Coll. of the Czech Republic (Civil Code).
+**3.1. Pure gift.** Contributions through the Platform are **pure gifts** within
+the meaning of § 2055 and subsequent of Act No. 89/2012 Coll. of the Czech Republic
+(Civil Code). A gift is a unilateral transfer of property without consideration
+(protiplnění) of any kind.
 
-**3.2.** By making a contribution, the Contributor expressly acknowledges and agrees that:
+**3.2. No products, no services, no benefits.** The Operator **does not provide**
+and the Contributor **does not receive** in exchange for a contribution:
+- Any goods, digital or physical
+- Any services, digital or physical
+- Any membership, subscription, or access rights
+- Any certificate, badge, NFT, token, or tradeable item of any kind
+- Any personalized acknowledgement, ranking, leaderboard placement, or ranking number
+- Any economic benefit, promise, or expectation of future value
 
-- (a) The contribution is **entirely voluntary**.
+**3.3. Express acknowledgement.** By making a contribution, the Contributor
+expressly acknowledges and agrees that:
+
+- (a) The contribution is **entirely voluntary** and motivated by the Contributor's
+  own choice, not by any expectation of return.
 - (b) The contribution is made **without any expectation of return, compensation,
-  service, or benefit**, economic or otherwise.
-- (c) The Certificate provided is a **symbolic commemorative acknowledgement of zero
-  economic value** and does not constitute goods, services, or consideration in any
-  legal or economic sense.
-- (d) The Operator makes **no promises, representations, or guarantees** regarding
-  use of contributions.
-- (e) The Contribution is **non-refundable** except as strictly required by applicable
-  mandatory law.
+  service, product, or benefit** of any kind — economic, material, digital, symbolic,
+  or otherwise.
+- (c) The Operator makes **no promises, representations, or guarantees** regarding
+  the use of contributions. The Operator may use contributions freely and at their
+  sole discretion.
+- (d) The Contribution is **final and non-refundable** except as strictly required
+  by applicable mandatory law.
+- (e) The Contributor confirms they have reviewed these Terms before payment and
+  their click or checkbox at the payment stage constitutes express acknowledgement
+  of the gift nature.
 
-## 4. The Certificate
+**3.4. No charitable status.** The Operator is **not a registered charity, non-profit
+organization, or public benefit entity**. Contributions are **not tax-deductible**
+as charitable donations in the Contributor's jurisdiction. The Operator cannot
+issue tax-deductible donation receipts.
 
-**4.1.** Upon a successful contribution, the Contributor may receive a unique digital
-certificate containing a sequential participant number and the date of contribution.
+## 4. Payments
 
-**4.2.** The Certificate:
-- Has no monetary, economic, or commercial value.
-- Does not grant any rights, privileges, or entitlements.
-- Is a purely commemorative symbol of participation in the ODG project.
-- Cannot be traded, transferred, redeemed, or used for any purpose other than personal
-  memento.
+**4.1. Payment providers.** Contributions are processed by third-party payment
+service providers. The Operator currently uses or may use:
 
-**4.3.** The Operator reserves the right to decline issuing a Certificate if the
-Contributor did not provide a valid email address or if technical issues prevent delivery.
+- **Stripe Payments Europe, Ltd.** (Ireland) — card payments, Apple Pay, Google Pay,
+  and selected regional payment methods
+- **Mollie B.V.** (Netherlands) — card payments, Apple Pay, Google Pay, PayPal,
+  iDEAL, Bancontact, BLIK, and selected regional payment methods
+- **PayPal (Europe) S.à r.l. et Cie, S.C.A.** (Luxembourg) — PayPal account payments
+  and PayPal-processed card payments
+- **Self-custody cryptocurrency addresses** operated directly by the Operator
+  (Bitcoin, Ethereum, Solana, and USDC)
 
-## 5. Payments and Refunds
+Each of these providers has its own terms of service and privacy policy, which
+the Contributor agrees to by selecting that payment method. The list of providers
+may change from time to time; the current list is maintained on the Platform.
 
-**5.1.** Contributions are processed by third-party payment providers (currently Stripe
-Payments Europe, Ltd., and self-custody cryptocurrency addresses operated by the Operator).
-These providers have their own terms of service which the Contributor agrees to when making
-a payment.
+**4.2. No storage of sensitive payment data.** The Operator does **not store**
+full payment card numbers, CVV codes, bank account credentials, or cryptocurrency
+private keys belonging to Contributors. All such data is handled exclusively by
+the respective PCI-DSS-compliant payment providers.
 
-**5.2.** The Operator does **not store payment card data**. All card information is
-handled exclusively by PCI-DSS-compliant payment providers.
+**4.3. Cryptocurrency contributions.** Contributions in cryptocurrency are final
+and irreversible by nature of blockchain technology. The Operator cannot reverse
+a confirmed blockchain transaction under any circumstances. Contributors are
+solely responsible for sending funds to the correct address displayed on the
+Platform at the time of payment.
 
-**5.3. Non-refundability.** As contributions are voluntary gifts without consideration:
-- No 14-day withdrawal right applies (this right under Directive 2011/83/EU applies to
-  consumer contracts for goods or services, not to gifts).
-- No right to return or refund arises from the contribution itself.
-- The Operator may, at its sole discretion, grant voluntary refunds in exceptional cases
-  (e.g. evident payment fraud reported promptly).
+## 5. No Right to Refund
 
-**5.4. Chargebacks.** If a Contributor disputes a payment with their bank or card issuer
-(chargeback), the Operator reserves the right to:
-- Provide evidence of the voluntary nature of the contribution (these Terms, the issued
-  Certificate, Contributor's IP and timestamp).
+**5.1.** As contributions are voluntary gifts without consideration:
+- The **14-day withdrawal right does not apply** (this right under Directive 2011/83/EU
+  applies to consumer contracts for goods or services, not to gifts).
+- **No right to return or refund** arises from the contribution itself.
+- Gifts made under § 2055 et seq. of the Czech Civil Code can only be returned under
+  very narrow circumstances specified in § 2068 (gross ingratitude) and § 2071 (need
+  of the donor), which do not apply to the Contributor's side.
+
+**5.2. Voluntary refunds (exceptional).** The Operator may, at its sole discretion,
+grant voluntary refunds in exceptional cases, including:
+- Evident payment fraud reported promptly by the Contributor or payment provider.
+- Duplicate charges due to technical error.
+- Verified proof that the Contributor was a minor or lacked legal capacity.
+
+Any voluntary refund is a gesture by the Operator and does not establish any
+precedent, right, or expectation for other contributions.
+
+**5.3. Chargebacks.** If a Contributor disputes a payment with their bank, card
+issuer, or payment provider (chargeback), the Operator reserves the right to:
+- Provide the payment provider with evidence of the voluntary, gift nature of the
+  contribution, including: these Terms (with version accepted), the Contributor's
+  explicit acknowledgement (checkbox/click record), IP address, timestamp, and
+  payment metadata.
 - Refuse future contributions from the same person.
+- Report abusive chargeback patterns to the respective payment provider.
 
-**5.5.** In the case of technical errors resulting in double charges, please contact
-honzapisk@gmail.com within 30 days — such duplicate charges will be refunded.
+**5.4. Technical errors.** In the case of technical errors resulting in double
+charges or unintended duplicate contributions, please contact
+honzapisk@gmail.com within 30 days — such errors will be corrected.
 
 ## 6. Eligibility
 
 **6.1.** To make a contribution, you must:
 - Be at least 18 years of age (or the age of majority in your jurisdiction).
-- Have the legal capacity to enter into binding agreements.
+- Have the legal capacity to enter into binding agreements and to make a gift
+  under the laws of your jurisdiction.
 - Be the authorized user of the payment method you employ.
+- Use your own funds and not funds obtained by unlawful means.
 
-**6.2.** The Platform is **not available** to residents of or persons located in
-jurisdictions subject to international sanctions, currently including: Russia, Belarus,
-Iran, North Korea, Syria, and regions of Ukraine under Russian occupation (Crimea,
-Donetsk, Luhansk). The Operator's payment providers automatically reject transactions
-originating from these jurisdictions.
+**6.2. Sanctioned jurisdictions.** The Platform is **not available** to residents
+of or persons located in jurisdictions subject to international sanctions, currently
+including: Russia, Belarus, Iran, North Korea, Syria, and regions of Ukraine under
+Russian occupation (Crimea, Donetsk, Luhansk). The Operator's payment providers
+automatically reject transactions originating from these jurisdictions.
 
-## 7. Prohibited Conduct
+## 7. Anti-Money Laundering (AML) and Large Contributions
+
+**7.1. Transparency obligation.** Payment providers and financial institutions
+are obliged under EU Directive (EU) 2015/849 (AML Directive, as amended) and Czech
+Act No. 253/2008 Coll. to perform identity and source-of-funds checks on transactions
+above certain thresholds.
+
+**7.2. Contributions above €10,000 (or equivalent).** Contributors should be aware
+that contributions of €10,000 or more in a single transaction or aggregated within
+a 12-month period may trigger **Enhanced Due Diligence (EDD)** by payment providers
+or the Operator's bank. This may require the Contributor to provide:
+- Proof of identity.
+- Proof of source of funds.
+- Additional documentation regarding the purpose of the contribution.
+
+Contributors intending to contribute at or above these amounts are encouraged to
+contact the Operator in advance at honzapisk@gmail.com to coordinate.
+
+**7.3. Right to refuse.** The Operator reserves the right to refuse or return any
+contribution that raises reasonable AML, fraud, or sanctions concerns, without
+obligation to explain the specific reason.
+
+## 8. Contributor's Tax Responsibility
+
+**8.1. Gift tax in donor's jurisdiction.** The Contributor is **solely responsible**
+for determining and complying with any gift tax, reporting, or disclosure obligations
+that may apply to them under the laws of their country of residence. Jurisdictions
+where gift tax or reporting may apply to donors include, without limitation:
+Germany (Schenkungsteuer), France (droits de donation), Spain, Italy, Belgium,
+Netherlands, Switzerland (cantonal), the United States (annual exclusion; IRS Form 709),
+Japan, South Korea, India, Brazil, and others.
+
+**8.2. No tax advice.** The Operator makes **no representations** regarding tax
+consequences for Contributors in any jurisdiction and **does not provide tax advice**.
+Contributors considering large contributions are strongly advised to consult a
+qualified tax professional in their own jurisdiction before contributing.
+
+**8.3. No charitable receipt.** The Operator will issue a simple payment confirmation
+upon request but **does not issue tax-deductible charitable receipts**, as the
+Operator is not a registered charity.
+
+## 9. Prohibited Conduct
 
 You agree not to:
-- Use the Platform for any illegal purpose, including money laundering or terrorism financing.
+- Use the Platform for any illegal purpose, including money laundering, terrorism
+  financing, sanctions evasion, or tax evasion.
 - Use a payment method that does not belong to you.
+- Use funds obtained from unlawful activities.
 - Attempt to circumvent payment limits or geographic restrictions.
-- Conduct automated or bulk transactions designed to manipulate contributor counts.
+- Conduct automated or bulk transactions designed to drain a stolen card, test
+  card credentials, or inflate contribution counts.
 - Violate intellectual property rights of the Operator or third parties.
 
-## 8. Intellectual Property
+## 10. Intellectual Property
 
-**8.1.** All content on the Platform — including text, graphics, logos, Certificate designs,
-code, and compiled data — is the property of the Operator and protected by copyright and
-other intellectual property laws.
+**10.1.** All content on the Platform — including text, graphics, logos, code,
+and compiled data — is the property of the Operator and protected by copyright
+and other intellectual property laws.
 
-**8.2.** You may download and retain your personal Certificate for private, non-commercial
-use. You may not reproduce the Platform's design or content for any other purpose without
-written permission.
+**10.2.** You may not reproduce the Platform's design or content for any purpose
+without written permission.
 
-## 9. Disclaimers and Limitation of Liability
+## 11. Disclaimers and Limitation of Liability
 
-**9.1. As-is basis.** The Platform and the Certificate are provided "AS IS" and "AS
-AVAILABLE" without any warranties, express or implied, to the fullest extent permitted
-by law.
+**11.1. As-is basis.** The Platform is provided "AS IS" and "AS AVAILABLE" without
+any warranties, express or implied, to the fullest extent permitted by law.
 
-**9.2.** The Operator does not warrant:
+**11.2.** The Operator does not warrant:
 - Continuous, uninterrupted, or error-free operation of the Platform.
 - That the Platform will meet your specific requirements.
-- That the Certificate will be deliverable under all circumstances.
+- That payment providers will successfully process every transaction.
 
-**9.3. Limitation of liability.** To the maximum extent permitted by applicable law,
-the Operator's total aggregate liability arising from or related to the Platform or
-any contribution shall not exceed **the amount of the contribution in question**.
+**11.3. Limitation of liability.** To the maximum extent permitted by applicable
+law, the Operator's total aggregate liability arising from or related to the
+Platform or any contribution shall not exceed **the amount of the contribution
+in question**.
 
-**9.4. Exclusion.** The Operator shall not be liable for:
-- Loss of data or failure to deliver the Certificate due to third-party service outages.
+**11.4. Exclusion.** The Operator shall not be liable for:
+- Loss of data due to third-party service outages.
 - Indirect, consequential, or incidental damages.
-- Third-party actions including but not limited to payment processor decisions, bank
-  chargebacks, or governmental actions.
+- Third-party actions including but not limited to payment processor decisions,
+  bank chargebacks, account freezes, or governmental actions.
+- Fluctuations in cryptocurrency exchange rates between the moment of payment
+  and any subsequent conversion.
 
-**9.5.** Nothing in these Terms excludes or limits liability that cannot lawfully be
-excluded, including liability for gross negligence, intentional misconduct, or personal
-injury caused by the Operator.
+**11.5.** Nothing in these Terms excludes or limits liability that cannot lawfully
+be excluded, including liability for gross negligence, intentional misconduct, or
+personal injury caused by the Operator.
 
-## 10. Data Protection
+## 12. Data Protection
 
-Processing of personal data is governed by our separate **Privacy Policy**, available
-at https://onedollarguy.com/privacy. By using the Platform, you acknowledge that you have read and
-understood the Privacy Policy.
+Processing of personal data is governed by our separate **Privacy Policy**,
+available at https://onedollarguy.com/privacy. By using the Platform, you acknowledge
+that you have read and understood the Privacy Policy.
 
-## 11. Changes to These Terms
+## 13. Changes to These Terms
 
-The Operator may update these Terms at any time. Material changes will be notified on
-the Platform. Continued use after publication of updated Terms constitutes acceptance
-of the changes.
+The Operator may update these Terms at any time. Material changes will be notified
+on the Platform. The version effective at the time of each contribution governs
+that contribution. Continued use after publication of updated Terms constitutes
+acceptance of the changes for future contributions.
 
-## 12. Governing Law and Dispute Resolution
+## 14. Governing Law and Dispute Resolution
 
-**12.1. Governing law.** These Terms are governed by and construed in accordance with
-the laws of the **Czech Republic**, excluding its conflict-of-laws rules and the United
-Nations Convention on Contracts for the International Sale of Goods.
+**14.1. Governing law.** These Terms are governed by and construed in accordance
+with the laws of the **Czech Republic**, excluding its conflict-of-laws rules
+and the United Nations Convention on Contracts for the International Sale of Goods.
 
-**12.2. Mandatory consumer protection.** Where the Contributor is a consumer with habitual
-residence in an EU Member State, the Contributor retains the protection of mandatory
-provisions of consumer-protection law in their jurisdiction, where such protection is
-applicable and more favorable.
+**14.2. Mandatory consumer protection.** Where the Contributor is a consumer with
+habitual residence in an EU Member State, the Contributor retains the protection
+of mandatory provisions of consumer-protection law in their jurisdiction, where
+such protection is applicable and more favorable. However, the Contributor
+acknowledges that gifts are not consumer contracts and that most consumer
+protection rules (such as the 14-day withdrawal right) do not apply to gifts.
 
-**12.3. Jurisdiction.** Disputes arising from or related to these Terms shall be subject
-to the exclusive jurisdiction of the **courts of the Czech Republic**, with the court of
-first instance being the District Court in Třebíč.
+**14.3. Jurisdiction.** Disputes arising from or related to these Terms shall be
+subject to the exclusive jurisdiction of the **courts of the Czech Republic**,
+with the court of first instance being the District Court in Třebíč.
 
-**12.4. Online dispute resolution.** EU consumers may use the European Commission's
+**14.4. Online dispute resolution.** EU consumers may use the European Commission's
 Online Dispute Resolution platform at ec.europa.eu/consumers/odr.
 
-## 13. Severability
+## 15. Severability
 
-If any provision of these Terms is held to be invalid or unenforceable, that provision
-shall be severed, and the remaining provisions shall remain in full force and effect.
+If any provision of these Terms is held to be invalid or unenforceable, that
+provision shall be severed, and the remaining provisions shall remain in full
+force and effect.
 
-## 14. Contact
+## 16. Contact
 
 For any questions regarding these Terms, please contact the Operator:
 
-- Email: honzapisk@gmail.com
-- Postal address: Jan Pisk, Křížkovského 334/10, 674 01 Třebíč, Czech Republic
+- **Name:** Jan Pisk
+- **Address:** Křížkovského 334/10, 674 01 Třebíč, Czech Republic
+- **IČO (business ID):** XXXXXXXX
+- **Email:** honzapisk@gmail.com
 
 ---
 
@@ -206,187 +306,286 @@ Vítejte na stránkách ODG — One Dollar Guy ("Platforma"). Tyto Podmínky už
 ("Podmínky") upravují váš přístup k Platformě a její využívání, provozované Janem
 Piskem ("Provozovatel").
 
+Platforma je osobní společenský experiment, jehož prostřednictvím Provozovatel
+zve jednotlivce z celého světa k zaslání dobrovolného symbolického daru.
+**Platforma neprodává žádné zboží ani služby. Za poskytnutý příspěvek nejsou
+poskytovány žádné výhody, odměny ani protiplnění jakéhokoli druhu.**
+
 Používáním Platformy nebo poskytnutím příspěvku vyjadřujete souhlas s těmito
 Podmínkami. Pokud s nimi nesouhlasíte, Platformu prosím nepoužívejte.
 
 ## 2. Definice
 
-- **Platforma**: Webová stránka, služby a související digitální obsah projektu ODG
-  (One Dollar Guy), aktuálně umístěná na [DOMÉNA].
+- **Platforma**: Webová stránka a související digitální obsah projektu ODG
+  (One Dollar Guy), aktuálně umístěná na onedollarguy.com.
 - **Provozovatel**: Jan Pisk, bytem Křížkovského 334/10, 674 01 Třebíč,
-  Česká republika, kontakt: honzapisk@gmail.com.
+  Česká republika, IČO: **XXXXXXXX**, kontakt: honzapisk@gmail.com.
 - **Přispěvatel / Uživatel**: Jakákoli osoba, která přistupuje k Platformě nebo
   poskytuje příspěvek.
-- **Příspěvek**: Dobrovolný peněžní dar bez protiplnění poskytnutý Provozovateli
-  prostřednictvím Platformy.
-- **Certifikát**: Personalizovaný digitální obrázek s jedinečným pořadovým číslem
-  ("Citizen #X z 8 200 000 000"), poskytovaný jako symbolické poděkování.
+- **Příspěvek / Dar**: Dobrovolný, jednostranný, bezúplatný peněžní dar
+  poskytnutý Přispěvatelem Provozovateli prostřednictvím Platformy dle § 2055
+  a násl. zákona č. 89/2012 Sb., občanského zákoníku.
 
-## 3. Povaha příspěvků
+## 3. Povaha příspěvků — dar, nikoli nákup
 
-**3.1.** Platforma umožňuje dobrovolné poskytování příspěvků fyzickými osobami
-z celého světa Provozovateli. Příspěvky mají povahu **darů** ve smyslu § 2055 a
-násl. zákona č. 89/2012 Sb., občanský zákoník.
+**3.1. Čistý dar.** Příspěvky poskytované prostřednictvím Platformy jsou **čistými
+dary** ve smyslu § 2055 a násl. zákona č. 89/2012 Sb., občanského zákoníku.
+Dar je jednostranné bezúplatné poskytnutí majetku bez jakéhokoli protiplnění.
 
-**3.2.** Poskytnutím příspěvku Přispěvatel výslovně bere na vědomí a souhlasí,
-že:
+**3.2. Žádné zboží, žádné služby, žádné výhody.** Provozovatel **neposkytuje** a
+Přispěvatel výměnou za příspěvek **nedostává**:
+- Žádné zboží, digitální ani fyzické
+- Žádné služby, digitální ani fyzické
+- Žádné členství, předplatné ani přístupová práva
+- Žádný certifikát, odznak, NFT, token ani obchodovatelnou položku jakéhokoli druhu
+- Žádné personalizované poděkování, umístění v žebříčku ani pořadové číslo
+- Žádnou ekonomickou výhodu, příslib ani očekávání budoucí hodnoty
 
-- (a) Příspěvek je **zcela dobrovolný**.
+**3.3. Výslovné potvrzení.** Poskytnutím příspěvku Přispěvatel výslovně bere na
+vědomí a souhlasí, že:
+
+- (a) Příspěvek je **zcela dobrovolný** a motivován vlastním rozhodnutím
+  Přispěvatele, nikoli očekáváním protiplnění.
 - (b) Příspěvek je poskytován **bez jakéhokoli očekávání protiplnění, náhrady,
-  služby či jiné výhody**, ekonomické či jiné.
-- (c) Poskytovaný Certifikát je **symbolické pamětní poděkování s nulovou
-  ekonomickou hodnotou** a nepředstavuje zboží, službu ani protiplnění v
-  jakémkoli právním či ekonomickém smyslu.
-- (d) Provozovatel **neposkytuje žádné sliby, prohlášení ani záruky** ohledně
-  využití příspěvků.
-- (e) Příspěvek je **nevratný** s výjimkou rozsahu stanoveného kogentní právní
-  úpravou.
+  služby, produktu nebo výhody** jakéhokoli druhu — ekonomické, materiální,
+  digitální, symbolické či jiné.
+- (c) Provozovatel **neposkytuje žádné sliby, prohlášení ani záruky** ohledně
+  využití příspěvků. Provozovatel může příspěvky využít libovolně a dle vlastního
+  uvážení.
+- (d) Příspěvek je **finální a nevratný** s výjimkou rozsahu stanoveného kogentní
+  právní úpravou.
+- (e) Přispěvatel potvrzuje, že se seznámil s těmito Podmínkami před platbou a
+  jeho kliknutí nebo zaškrtnutí checkboxu při platbě představuje výslovný souhlas
+  s darovací povahou příspěvku.
 
-## 4. Certifikát
+**3.4. Nejedná se o charitu.** Provozovatel **není registrovanou charitou,
+neziskovou organizací ani subjektem veřejně prospěšným**. Příspěvky **nejsou
+daňově odpočitatelné** jako dary na charitu v jurisdikci Přispěvatele. Provozovatel
+nemůže vystavovat potvrzení o daru pro daňové účely.
 
-**4.1.** Po úspěšně provedeném příspěvku může Přispěvatel obdržet jedinečný
-digitální certifikát obsahující pořadové číslo účastníka a datum poskytnutí
-příspěvku.
+## 4. Platby
 
-**4.2.** Certifikát:
-- Nemá žádnou peněžní, ekonomickou ani obchodní hodnotu.
-- Neposkytuje žádná práva, výhody ani nároky.
-- Je čistě pamětním symbolem účasti v projektu ODG.
-- Nelze jej obchodovat, převádět, směňovat ani používat pro jiný účel než osobní
-  památku.
+**4.1. Poskytovatelé platebních služeb.** Příspěvky jsou zpracovávány
+prostřednictvím poskytovatelů platebních služeb třetích stran. Provozovatel
+aktuálně používá nebo může používat:
 
-**4.3.** Provozovatel si vyhrazuje právo nevystavit Certifikát, pokud Přispěvatel
-neposkytl platnou e-mailovou adresu nebo pokud technické potíže brání jeho doručení.
+- **Stripe Payments Europe, Ltd.** (Irsko) — platby kartou, Apple Pay, Google Pay
+  a vybrané regionální platební metody
+- **Mollie B.V.** (Nizozemsko) — platby kartou, Apple Pay, Google Pay, PayPal,
+  iDEAL, Bancontact, BLIK a vybrané regionální platební metody
+- **PayPal (Europe) S.à r.l. et Cie, S.C.A.** (Lucembursko) — platby přes PayPal
+  účet a karty zpracovávané prostřednictvím PayPal
+- **Adresy kryptoměn v samostatné úschově** přímo Provozovatele (Bitcoin, Ethereum,
+  Solana a USDC)
 
-## 5. Platby a vrácení
+Každý z těchto poskytovatelů má vlastní smluvní podmínky a zásady ochrany
+osobních údajů, s nimiž Přispěvatel souhlasí zvolením dané platební metody.
+Seznam poskytovatelů se může průběžně měnit; aktuální seznam je udržován na
+Platformě.
 
-**5.1.** Příspěvky jsou zpracovávány prostřednictvím poskytovatelů platebních služeb
-třetích stran (aktuálně Stripe Payments Europe, Ltd. a adresy kryptoměn v samostatné
-úschově Provozovatele). Tito poskytovatelé mají vlastní smluvní podmínky, se kterými
-Přispěvatel souhlasí provedením platby.
+**4.2. Neukládání citlivých platebních údajů.** Provozovatel **neukládá** plná
+čísla platebních karet, CVV kódy, přístupové údaje k bankovním účtům ani
+soukromé klíče ke kryptoměnám patřící Přispěvatelům. Veškeré takové údaje jsou
+zpracovávány výhradně příslušnými poskytovateli platebních služeb
+odpovídajícími standardu PCI-DSS.
 
-**5.2.** Provozovatel **neukládá data platebních karet**. Veškerá informace o
-kartách jsou zpracovávány výhradně poskytovateli platebních služeb odpovídajícími
-standardu PCI-DSS.
+**4.3. Příspěvky v kryptoměnách.** Příspěvky v kryptoměnách jsou vzhledem k povaze
+blockchainové technologie finální a nevratné. Provozovatel nemůže za žádných
+okolností zvrátit potvrzenou blockchainovou transakci. Přispěvatel je výhradně
+odpovědný za odeslání prostředků na správnou adresu zobrazenou na Platformě v
+okamžiku platby.
 
-**5.3. Nevratnost.** Protože příspěvky jsou dobrovolnými dary bez protiplnění:
-- Nevztahuje se na ně právo na odstoupení ve lhůtě 14 dnů (toto právo podle směrnice
-  2011/83/EU se vztahuje na spotřebitelské smlouvy o zboží nebo službách, nikoli na
-  dary).
-- Samotným příspěvkem nevzniká právo na jeho vrácení.
-- Provozovatel může dle vlastního uvážení udělit dobrovolné vrácení ve výjimečných
-  případech (např. zjevný podvod platbou nahlášený bez zbytečného odkladu).
+## 5. Žádný nárok na vrácení
 
-**5.4. Chargebacky.** Pokud Přispěvatel zpochybní platbu u své banky nebo vydavatele
-karty (chargeback), Provozovatel si vyhrazuje právo:
-- Předložit důkazy o dobrovolné povaze příspěvku (tyto Podmínky, vydaný Certifikát,
-  IP adresu a časové razítko Přispěvatele).
+**5.1.** Protože příspěvky jsou dobrovolnými dary bez protiplnění:
+- **Právo na odstoupení ve lhůtě 14 dnů se neuplatní** (toto právo podle směrnice
+  2011/83/EU se vztahuje na spotřebitelské smlouvy o zboží nebo službách, nikoli
+  na dary).
+- **Samotným příspěvkem nevzniká právo na jeho vrácení.**
+- Dary poskytnuté dle § 2055 a násl. občanského zákoníku lze vrátit pouze za velmi
+  úzkých okolností stanovených v § 2068 (hrubá nevděčnost obdarovaného) a § 2071
+  (upadnutí dárce do nouze), které se netýkají strany Přispěvatele.
+
+**5.2. Dobrovolné vrácení (výjimečně).** Provozovatel může dle vlastního uvážení
+udělit dobrovolné vrácení ve výjimečných případech, včetně:
+- Zjevného podvodu platbou nahlášeného bez zbytečného odkladu Přispěvatelem nebo
+  poskytovatelem platebních služeb.
+- Duplicitního stržení částky v důsledku technické chyby.
+- Ověřeného důkazu, že Přispěvatel byl nezletilý nebo neměl právní způsobilost.
+
+Jakékoli dobrovolné vrácení je gestem Provozovatele a nezakládá žádný precedent,
+nárok ani očekávání pro jiné příspěvky.
+
+**5.3. Chargebacky.** Pokud Přispěvatel zpochybní platbu u své banky, vydavatele
+karty nebo poskytovatele platebních služeb (chargeback), Provozovatel si
+vyhrazuje právo:
+- Předložit poskytovateli platebních služeb důkazy o dobrovolné, darovací
+  povaze příspěvku, včetně: těchto Podmínek (s verzí, kterou Přispěvatel
+  akceptoval), výslovného souhlasu Přispěvatele (záznam kliknutí/checkboxu),
+  IP adresy, časového razítka a platebních metadat.
 - Odmítnout budoucí příspěvky od stejné osoby.
+- Oznámit vzorce zneužívání chargebacků příslušnému poskytovateli platebních
+  služeb.
 
-**5.5.** V případě technické chyby vedoucí ke dvojímu stržení částky nás prosím
-kontaktujte na honzapisk@gmail.com do 30 dnů — taková duplicitní platba bude vrácena.
+**5.4. Technické chyby.** V případě technické chyby vedoucí ke dvojímu stržení
+částky nebo nezamýšlenému duplikátnímu příspěvku prosím kontaktujte
+honzapisk@gmail.com do 30 dnů — takové chyby budou opraveny.
 
 ## 6. Způsobilost
 
 **6.1.** Pro poskytnutí příspěvku musíte:
 - Být starší 18 let (nebo dosáhnout zletilosti dle vašeho právního řádu).
-- Mít způsobilost uzavírat závazné smlouvy.
+- Mít způsobilost uzavírat závazné smlouvy a poskytovat dary dle právního řádu
+  vaší jurisdikce.
 - Být oprávněným uživatelem platebního prostředku, který používáte.
+- Používat vlastní prostředky, nikoli prostředky získané nezákonnou cestou.
 
-**6.2.** Platforma **není dostupná** rezidentům nebo osobám nacházejícím se v
-jurisdikcích podléhajících mezinárodním sankcím, aktuálně včetně: Ruska, Běloruska,
-Íránu, Severní Koreje, Sýrie a regionů Ukrajiny pod ruskou okupací (Krym, Doněck,
-Luhansk). Poskytovatelé platebních služeb Provozovatele automaticky odmítají
-transakce pocházející z těchto jurisdikcí.
+**6.2. Sankcionované jurisdikce.** Platforma **není dostupná** rezidentům nebo
+osobám nacházejícím se v jurisdikcích podléhajících mezinárodním sankcím,
+aktuálně včetně: Ruska, Běloruska, Íránu, Severní Koreje, Sýrie a regionů
+Ukrajiny pod ruskou okupací (Krym, Doněck, Luhansk). Poskytovatelé platebních
+služeb Provozovatele automaticky odmítají transakce pocházející z těchto
+jurisdikcí.
 
-## 7. Zakázané jednání
+## 7. Prevence praní špinavých peněz (AML) a velké příspěvky
+
+**7.1. Povinnost transparentnosti.** Poskytovatelé platebních služeb a finanční
+instituce jsou povinni podle směrnice EU (EU) 2015/849 (AML směrnice, ve znění
+pozdějších předpisů) a zákona č. 253/2008 Sb. provádět ověření totožnosti a
+zdroje prostředků u transakcí nad určité limity.
+
+**7.2. Příspěvky nad 10 000 € (nebo ekvivalent).** Přispěvatelé by měli vědět,
+že příspěvky ve výši 10 000 € nebo vyšší v jedné transakci nebo v součtu za
+12 měsíců mohou spustit **Enhanced Due Diligence (EDD)** ze strany poskytovatelů
+platebních služeb nebo banky Provozovatele. To může vyžadovat, aby Přispěvatel
+doložil:
+- Doklad o totožnosti.
+- Doklad o zdroji prostředků.
+- Dodatečnou dokumentaci o účelu příspěvku.
+
+Přispěvatelé, kteří plánují poskytnout příspěvek v této nebo vyšší výši, jsou
+vyzváni, aby předem kontaktovali Provozovatele na honzapisk@gmail.com.
+
+**7.3. Právo odmítnout.** Provozovatel si vyhrazuje právo odmítnout nebo vrátit
+jakýkoli příspěvek, který vzbuzuje důvodné obavy z praní špinavých peněz,
+podvodu nebo porušení sankcí, bez povinnosti vysvětlit konkrétní důvod.
+
+## 8. Daňová odpovědnost Přispěvatele
+
+**8.1. Darovací daň v jurisdikci dárce.** Přispěvatel je **výhradně odpovědný**
+za určení a splnění jakýchkoli povinností darovací daně, ohlašovacích nebo
+informačních povinností, které se na něj mohou vztahovat podle práva země jeho
+pobytu. Jurisdikce, kde se mohou na dárce vztahovat darovací daň nebo ohlašovací
+povinnosti, zahrnují bez omezení: Německo (Schenkungsteuer), Francie (droits
+de donation), Španělsko, Itálie, Belgie, Nizozemsko, Švýcarsko (kantonálně),
+Spojené státy (roční limit; IRS formulář 709), Japonsko, Jižní Korea, Indie,
+Brazílie a další.
+
+**8.2. Žádné daňové poradenství.** Provozovatel **neposkytuje žádné informace
+ani záruky** ohledně daňových dopadů pro Přispěvatele v jakékoli jurisdikci a
+**neposkytuje daňové poradenství**. Přispěvatelům, kteří zvažují velké
+příspěvky, se důrazně doporučuje konzultovat kvalifikovaného daňového poradce
+ve své vlastní jurisdikci před poskytnutím příspěvku.
+
+**8.3. Žádné potvrzení o daru na charitu.** Provozovatel vystaví jednoduché
+potvrzení o platbě na vyžádání, ale **nevystavuje potvrzení o daru pro daňové
+odpočty**, protože Provozovatel není registrovanou charitou.
+
+## 9. Zakázané jednání
 
 Zavazujete se, že nebudete:
-- Používat Platformu pro jakýkoli nezákonný účel, včetně praní špinavých peněz
-  nebo financování terorismu.
+- Používat Platformu pro jakýkoli nezákonný účel, včetně praní špinavých peněz,
+  financování terorismu, obcházení sankcí nebo krácení daně.
 - Používat platební prostředek, který vám nepatří.
+- Používat prostředky získané z nezákonných činností.
 - Pokoušet se obcházet platební limity nebo geografická omezení.
-- Provádět automatizované nebo hromadné transakce směřující k manipulaci s počtem
-  přispěvatelů.
+- Provádět automatizované nebo hromadné transakce za účelem zneužití odcizené
+  karty, testování platebních údajů nebo navyšování počtu příspěvků.
 - Porušovat práva duševního vlastnictví Provozovatele nebo třetích osob.
 
-## 8. Duševní vlastnictví
+## 10. Duševní vlastnictví
 
-**8.1.** Veškerý obsah Platformy — včetně textů, grafiky, log, designu Certifikátů,
-kódu a souhrnných dat — je majetkem Provozovatele a chráněn autorským právem a
-dalšími zákony o duševním vlastnictví.
+**10.1.** Veškerý obsah Platformy — včetně textů, grafiky, log, kódu a souhrnných
+dat — je majetkem Provozovatele a chráněn autorským právem a dalšími zákony o
+duševním vlastnictví.
 
-**8.2.** Svůj osobní Certifikát si můžete stáhnout a uchovat pro soukromé,
-nekomerční použití. Nesmíte bez písemného souhlasu Provozovatele reprodukovat
-design nebo obsah Platformy pro jiné účely.
+**10.2.** Bez písemného souhlasu Provozovatele nesmíte reprodukovat design nebo
+obsah Platformy pro žádný účel.
 
-## 9. Vyloučení záruk a omezení odpovědnosti
+## 11. Vyloučení záruk a omezení odpovědnosti
 
-**9.1. "As-is".** Platforma a Certifikát jsou poskytovány "jak jsou" a "jak jsou
-dostupné" bez jakýchkoli záruk, výslovných či předpokládaných, v nejširším rozsahu
-povoleném zákonem.
+**11.1. "As-is".** Platforma je poskytována "jak je" a "jak je dostupná" bez
+jakýchkoli záruk, výslovných či předpokládaných, v nejširším rozsahu povoleném
+zákonem.
 
-**9.2.** Provozovatel nezaručuje:
+**11.2.** Provozovatel nezaručuje:
 - Nepřetržitý, bezchybný a neomezený provoz Platformy.
 - Že Platforma bude odpovídat vašim konkrétním požadavkům.
-- Že Certifikát bude doručitelný za všech okolností.
+- Že poskytovatelé platebních služeb úspěšně zpracují každou transakci.
 
-**9.3. Omezení odpovědnosti.** V nejširším rozsahu povoleném rozhodným právem,
+**11.3. Omezení odpovědnosti.** V nejširším rozsahu povoleném rozhodným právem
 celková souhrnná odpovědnost Provozovatele vyplývající z nebo související s
 Platformou nebo jakýmkoli příspěvkem **nepřekročí částku daného příspěvku**.
 
-**9.4. Vyloučení.** Provozovatel neodpovídá za:
-- Ztrátu dat nebo nedoručení Certifikátu z důvodu výpadku služeb třetích stran.
+**11.4. Vyloučení.** Provozovatel neodpovídá za:
+- Ztrátu dat z důvodu výpadku služeb třetích stran.
 - Nepřímé, následné nebo náhodné škody.
 - Jednání třetích stran včetně rozhodnutí poskytovatelů platebních služeb,
-  chargebacky bank nebo jednání orgánů státní správy.
+  chargebacky bank, zmrazení účtů nebo jednání orgánů státní správy.
+- Kolísání kurzu kryptoměn mezi okamžikem platby a jakoukoli následnou konverzí.
 
-**9.5.** Nic v těchto Podmínkách nevylučuje ani neomezuje odpovědnost, kterou nelze
-podle zákona vyloučit, včetně odpovědnosti za hrubou nedbalost, úmyslné jednání
-nebo újmu na zdraví způsobenou Provozovatelem.
+**11.5.** Nic v těchto Podmínkách nevylučuje ani neomezuje odpovědnost, kterou
+nelze podle zákona vyloučit, včetně odpovědnosti za hrubou nedbalost, úmyslné
+jednání nebo újmu na zdraví způsobenou Provozovatelem.
 
-## 10. Ochrana osobních údajů
+## 12. Ochrana osobních údajů
 
 Zpracování osobních údajů se řídí samostatnými **Zásadami ochrany osobních údajů**,
-dostupnými na https://onedollarguy.com/privacy. Používáním Platformy berete na vědomí, že jste si
-Zásady ochrany osobních údajů přečetli a porozuměli jim.
+dostupnými na https://onedollarguy.com/privacy. Používáním Platformy berete na
+vědomí, že jste si Zásady ochrany osobních údajů přečetli a porozuměli jim.
 
-## 11. Změny Podmínek
+## 13. Změny Podmínek
 
-Provozovatel může tyto Podmínky kdykoli aktualizovat. Podstatné změny budou oznámeny
-na Platformě. Pokračování v užívání po zveřejnění aktualizovaných Podmínek
-představuje souhlas se změnami.
+Provozovatel může tyto Podmínky kdykoli aktualizovat. Podstatné změny budou
+oznámeny na Platformě. Verze účinná v okamžiku každého příspěvku platí pro
+tento příspěvek. Pokračování v užívání po zveřejnění aktualizovaných Podmínek
+představuje souhlas se změnami pro budoucí příspěvky.
 
-## 12. Rozhodné právo a řešení sporů
+## 14. Rozhodné právo a řešení sporů
 
-**12.1. Rozhodné právo.** Tyto Podmínky se řídí a budou vykládány v souladu s
+**14.1. Rozhodné právo.** Tyto Podmínky se řídí a budou vykládány v souladu s
 právem **České republiky**, s vyloučením kolizních norem a Úmluvy OSN o smlouvách
 o mezinárodní koupi zboží.
 
-**12.2. Kogentní spotřebitelská ochrana.** Je-li Přispěvatelem spotřebitel s
+**14.2. Kogentní spotřebitelská ochrana.** Je-li Přispěvatelem spotřebitel s
 obvyklým pobytem v členském státě EU, zachovávají se mu práva vyplývající z
 kogentních ustanovení spotřebitelského práva jeho domovské jurisdikce, pokud
-jsou taková ustanovení použitelná a pro Přispěvatele výhodnější.
+jsou taková ustanovení použitelná a pro Přispěvatele výhodnější. Přispěvatel
+však bere na vědomí, že dary nejsou spotřebitelskými smlouvami a většina pravidel
+na ochranu spotřebitele (např. právo na odstoupení ve 14 dnech) se na dary
+neuplatní.
 
-**12.3. Pravomoc.** Spory vyplývající z těchto Podmínek nebo s nimi související
+**14.3. Pravomoc.** Spory vyplývající z těchto Podmínek nebo s nimi související
 budou řešeny výhradně u **soudů České republiky**, přičemž soudem prvního stupně
 je Okresní soud v Třebíči.
 
-**12.4. Online řešení sporů.** Spotřebitelé v EU mohou využít platformu
+**14.4. Online řešení sporů.** Spotřebitelé v EU mohou využít platformu
 Evropské komise pro online řešení sporů na ec.europa.eu/consumers/odr.
 
-## 13. Oddělitelnost
+## 15. Oddělitelnost
 
 Pokud je některé ustanovení těchto Podmínek shledáno neplatným nebo nevymahatelným,
 toto ustanovení bude odděleno a ostatní ustanovení zůstávají plně v platnosti a
 účinnosti.
 
-## 14. Kontakt
+## 16. Kontakt
 
 V jakýchkoli otázkách týkajících se těchto Podmínek prosím kontaktujte Provozovatele:
 
-- E-mail: honzapisk@gmail.com
-- Poštovní adresa: Jan Pisk, Křížkovského 334/10, 674 01 Třebíč, Česká republika
+- **Jméno:** Jan Pisk
+- **Adresa:** Křížkovského 334/10, 674 01 Třebíč, Česká republika
+- **IČO:** XXXXXXXX
+- **E-mail:** honzapisk@gmail.com
 
 ---
 

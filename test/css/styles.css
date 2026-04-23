@@ -1,3 +1,16 @@
+/*
+ * Twemoji Country Flags — fix pro Windows (Segoe UI Emoji nemá vlajky).
+ * Font je cílený přes unicode-range jen na regionální indikátory (vlajky států)
+ * a sub-division tags (🏴󠁧󠁢󠁥󠁮󠁧 apod.), takže zbytek emoji zůstává systémových.
+ * Stáhne se jen když stránka obsahuje flag znak.
+ */
+@font-face {
+    font-family: 'Twemoji Country Flags';
+    unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+    src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
+    font-display: swap;
+}
+
 :root {
     --bg: #08040f;
     --c1: #ff2d78;
@@ -31,7 +44,7 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Twemoji Country Flags', 'Inter', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased

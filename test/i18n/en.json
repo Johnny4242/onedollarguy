@@ -36,9 +36,9 @@
     "h1b": "one",
     "h1c": "dollar.",
     "tag": "just one dollar<br><span class=\"tagline-opt\">(or more?)</span>",
-    "sub": "There are <b>8,200,000,000</b> people on this planet. $1 won't hurt anyone. It makes me a billionaire. No charity, nothing in return. You lose nothing. I gain everything.",
+    "sub": "There are <b>8,200,000,000</b> people on this planet. 1 dollar won't kill anyone. It will make me a billionaire. You lose nothing, I gain absolutely everything.",
 
-    "meta": "people in so far",
+    "meta": "people already gave",
     "pct": "{p}% of humanity",
     "sl1": "Donors",
     "sl2": "Countries",
@@ -57,18 +57,18 @@
     "msghint": "I read every single one",
 
     "s4": "Send",
-    "legal": "This is a gift. No refunds. I'm 18+. <span class=\"tl\" onclick=\"openT(event)\">Read terms.</span>",
+    "legal": "It's a gift. No refunds. I'm 18+. <span class=\"tl\" onclick=\"openT(event)\">Read the terms.</span>",
     "btn": "Send {a}",
     "sec": "100% anonymous · Secure payment",
 
     "sTitle": "Thank you. Really.",
-    "sSub": "Somewhere in Central Europe a tired guy just looked at his phone and smiled. That was me. Thanks to you.",
+    "sSub": "Somewhere in Central Europe a tired guy just looked at his phone and smiled. That was me. Because of you.",
 
     "abt": "Who is this guy?",
     "ap1": "<b>Nobody. And that's the whole point.</b>",
     "ap2": "I'm an ordinary guy from Central Europe. I get up at five, go to the factory, come back tired. Over and over.",
     "ap3": "I'm not a company. I'm not a charity. I'm not an influencer. No sob story. I'm not pretending to save the world.",
-    "ap4": "One idea wouldn't leave me alone: <b>what if I actually tried?</b> If everyone gave me a dollar, nobody would even notice. I'd be a billionaire. So here I am.",
+    "ap4": "One idea wouldn't leave my head: <b>what if I actually tried?</b> If everyone gave me a dollar, nobody would even notice. I'd be a billionaire. So here I am.",
     "ap5": "No promises. No rewards. No NFTs. Just a cash gift and a thank-you. If it works — I'll never have to set an alarm again. If it doesn't — at least I tried!",
 
     "badge": "Anonymous",
@@ -84,9 +84,9 @@
     "astra_a": "„through hardships<br>to the stars\"",
 
     "kontakt_btn": "contact",
-    "kontakt_msg": "I prefer to stay anonymous — but if you still want to reach out, here is my email:",
+    "kontakt_msg": "I want to stay anonymous — but if you still want to contact me, here's my email:",
 
-    "share_tweet": "I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Join in!",
+    "share_tweet": "I just gave a dollar to One Dollar Guy. 8.2 billion to go. {url} Come join in!",
 
     "ft_privacy": "Privacy",
     "ft_soon": "(soon)",
@@ -99,23 +99,23 @@
   "faq": [
     [
       "Is this a scam?",
-      "If I were a scammer, I'd have a better story. A sick kitten, saving the rainforest, an AI startup…\n\nInstead I'm just telling you straight: <b>I want your money, and I'm not pretending it's for anything else.</b> This might be the most honest website you clicked today."
+      "If I were a scammer, I'd have come up with a better story. Saving the world, an AI startup…\n\nBut no — I'm telling you straight: <b>I want money, and I'm not pretending it's for anything else.</b> I'm honest. Payments go through global payment gateways — everything is secure."
     ],
     [
-      "Why would I even give you a dollar?",
-      "You don't have to. Nobody's forcing you. But think\u00a0— <b>when did you last do something that cost you almost nothing, but might actually mean the world to someone?</b> One dollar. Less than a coffee. Less than that thing you bought and forgot about in an hour."
+      "Why should I even give you a dollar?",
+      "You don't have to. Nobody's forcing you. But think about it — <b>when was the last time you did something that cost you practically nothing, but might have given someone hope?</b> One \"dollar\" — ideally more 😄. It's up to you. All I can do is thank you."
     ],
     [
       "What will you do with the money?",
-      "Honestly? I want to travel. I've never been on a plane. I want to eat good food. Not worry about making rent or paying off a loan. <b>And one day maybe I'll buy a classic American car</b>\u00a0— been a dream since I was a kid. The rest? I don't know. I'd need to get there first… 😄"
+      "It won't be that hot 😄 <b>From one dollar, after everything, barely anything is left for me.</b>\u00a0 I want to travel. I've never been on a plane. I want to eat good food. Not to worry whether I'll make it through the month. I won't pay off my loan. <b>And one day I might buy an old American car</b>\u00a0— that's been a dream since I was a kid. I know that if the project works out, I'd definitely help others too. And if it goes extremely well? As the classic said — hookers, booze and canapés 😄."
     ],
     [
       "Who are you actually?",
-      "Johnny. 30, going bald, work with my hands. I've always fixed everything myself\u00a0— if I couldn't fix it, I didn't have it. I work out and love good food. <b>Introvert, love animals and nature.</b> Survived a month on plain rice when times were tough. Never had luck with women\u00a0— so maybe at least this idea works out. 🥲"
+      "Honza. 30, my hair's already thinning 😄 I work with my hands. Since I was a kid I've fixed everything myself — what I couldn't fix, I didn't have. I like working out and eating good food. <b>I'm an introvert, I love animals and nature.</b> I've never had anything for free, but they say miracles happen, so we'll see."
     ],
     [
-      "Do you actually think this will work?",
-      "Honestly, I don't know. But I know one thing\u00a0— <b>if I don't try, I'll know for sure it won't.</b> The biggest regrets in life aren't the things that didn't work out. They're the ones we never even tried."
+      "Do you really think this will work?",
+      "I don't know. But I know one thing — <b>if I didn't try, I'd know for sure it wouldn't.</b> The biggest regrets in life aren't the things that didn't work out. They're the ones we never even started."
     ]
   ]
 }

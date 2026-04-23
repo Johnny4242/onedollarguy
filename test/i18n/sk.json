@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "code": "sk",
+    "name": "Slovenčina",
+    "englishName": "Slovak",
+    "flag": "🇸🇰",
+    "regions": ["SK"],
+    "direction": "ltr",
+    "isSourceOfTruth": false
+  },
+
+  "payment": {
+    "currency": "EUR",
+    "symbol": "€",
+    "symbolBeforeAmount": false,
+    "defaultAmounts": [1, 5, 10],
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Karta" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "paypal",   "icon": "🅿",  "name": "PayPal" },
+      { "id": "transfer", "icon": "🏦", "name": "Prevod" },
+      { "id": "crypto",   "icon": "₿",  "name": "Crypto" }
+    ]
+  },
+
+  "ui": {
+    "cur": "EUR",
+    "sym": "€",
+    "pre": false,
+    "a": [1, 5, 10],
+
+    "ey": "Experiment · 2026",
+
+    "h1a": "Daj mi",
+    "h1b": "jeden",
+    "h1c": "dollar.",
+    "tag": "len jeden dollar<br><span class=\"tagline-opt\">(alebo viac?)</span>",
+    "sub": "Na planéte je <b>8 200 000 000</b> ľudí. 1 dollar nikoho nezabije. Mňa spraví miliardárom. Ty nič nestratíš, ja získam úplne všetko.",
+
+    "meta": "ľudí už prispelo",
+    "pct": "{p}% ľudstva",
+    "sl1": "Darcovia",
+    "sl2": "Krajín",
+    "sl3": "Dnes",
+
+    "s1": "Vyber sumu",
+    "c1": "EUR · klasika",
+    "c5": "EUR · stred",
+    "c10": "EUR · hrdina",
+    "co": "∞",
+    "coc": "tvoja voľba",
+
+    "s2": "Vyber spôsob platby",
+
+    "s3": "Nechaj mi odkaz (nepovinné)",
+    "msghint": "Čítam každý jeden",
+
+    "s4": "Odoslať",
+    "legal": "Je to dar. Bez nároku na vrátenie. Mám 18+. <span class=\"tl\" onclick=\"openT(event)\">Prečítať podmienky.</span>",
+    "btn": "Poslať {a}",
+    "sec": "100% anonymné · Bezpečná platba",
+
+    "sTitle": "Ďakujem. Naozaj.",
+    "sSub": "Niekde v strednej Európe sa práve unavený chlap pozrel na telefón a usmial sa. To som bol ja. Vďaka tebe.",
+
+    "abt": "Kto je ten chlap?",
+    "ap1": "<b>Nikto. A práve o tom to celé je.</b>",
+    "ap2": "Som obyčajný chlap zo strednej Európy. Vstávam o piatej, idem do fabriky, vraciam sa unavený. Stále dookola.",
+    "ap3": "Nie som firma. Nie som charita. Nie som influencer. Žiadny dojemný príbeh. Nepredstieram, že zachraňujem svet.",
+    "ap4": "Jeden nápad mi nedal pokoj: <b>čo keby som to naozaj skúsil?</b> Keby mi každý dal jeden dollar, ani by si to nikto nevšimol. Ja by som bol miliardár. Tak som tu.",
+    "ap5": "Žiadne sľuby. Žiadne odmeny. Žiadne NFT. Iba peňažný dar a poďakovanie. Ak to zafunguje — už nikdy nebudem musieť nastavovať budík. Ak nie — aspoň som to skúsil!",
+
+    "badge": "Anonymný",
+    "tmt": "Podmienky",
+    "ft": "© onedollarguy.com · Nie je to charita · Iba osobné dary",
+
+    "nav_lang": "jazyk",
+    "nav_share": "zdieľať",
+    "share_title": "Zdieľať",
+    "close_title": "Zavrieť",
+
+    "astra_q": "?čo to znamená?",
+    "astra_a": "„cez prekážky<br>ku hviezdam\"",
+
+    "kontakt_btn": "kontakt",
+    "kontakt_msg": "Chcem zostať v anonymite — ale ak ma aj tak chceš kontaktovať, tu je môj mail:",
+
+    "share_tweet": "Práve som dal One Dollar Guyovi príspevok. Zostáva 8,2 miliardy. {url} Pridaj sa aj ty!",
+
+    "ft_privacy": "Súkromie",
+    "ft_soon": "(čoskoro)",
+
+    "pmt": "Zásady ochrany osobných údajov",
+    "legal_loading": "Načítavam…",
+    "legal_error": "Dokument sa nepodarilo načítať. Skúste to prosím znova."
+  },
+
+  "faq": [
+    [
+      "Je to podvod?",
+      "Keby som bol podvodník, vymyslel by som si lepší príbeh. Záchrana sveta, startup s AI…\n\nAle nie — hovorím to narovinu: <b>chcem peniaze a netvárim sa, že je to kvôli niečomu inému.</b> Som úprimný. Platby prebiehajú cez svetové platobné brány — všetko je bezpečné."
+    ],
+    [
+      "Prečo by som ti mal vôbec dať dollar?",
+      "Nemusíš. Nikto ťa nenúti. Ale premýšľaj — <b>kedy si naposledy urobil niečo, čo ťa prakticky nič nestálo, ale niekomu to mohlo dať nádej?</b> Jeden \"dollar\" — ideálne viac 😄. Je to na tebe. Ja ti môžem len poďakovať."
+    ],
+    [
+      "Čo s tými peniazmi urobíš?",
+      "Nebude to také horúce 😄 <b>Z jedného dollaru mi v konečnom dôsledku ostane minimum.</b>\u00a0 Chcem cestovať. Ešte nikdy som neletel lietadlom. Chcem jesť dobré jedlo. Nemať starosti, že tento mesiac nevyjdem s peniazmi. Nesplatím pôžičku. <b>A jedného dňa si snáď kúpim starú americkú fúru</b>\u00a0— to je sen od malička. Viem, že ak by sa projekt podaril, určite by som pomohol aj ostatným. No a keby sa extrémne podarilo? Ako povedal klasik — kurvy, chlast a chlebíčky 😄."
+    ],
+    [
+      "Kto vlastne si?",
+      "Honza. 30 rokov, vlasy mi už redú 😄 Pracujem rukami. Od malička som si opravoval všetko sám — čo som si neopravil, to som nemal. Rád cvičím a jem dobré jedlo. <b>Som introvert, mám rád zvieratá a prírodu.</b> Nikdy som nič nemal zadarmo, ale vraj sa zázraky dejú, tak uvidíme."
+    ],
+    [
+      "Myslíš, že to naozaj vyjde?",
+      "Neviem. Ale viem jedno — <b>keby som to neskúsil, vedel by som to isto.</b> Najväčšia škoda v živote nie sú veci, ktoré sa nepodarili. Sú to tie, do ktorých sme sa ani nepustili."
+    ]
+  ]
+}

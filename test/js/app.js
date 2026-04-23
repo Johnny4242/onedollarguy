@@ -111,6 +111,11 @@ async function go(l) {
     document.getElementById('page').style.display = 'block';
     document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
 
+    // Při přepnutí jazyka MUSÍME vynulovat formulář — hlavně checkbox souhlasu
+    // s podmínkami. Uživatel ho v novém jazyce musí potvrdit znovu, protože
+    // podmínky vidí v jiné jazykové verzi.
+    resetForm();
+
     apply();
     animCtr();
     document.getElementById('clbl').textContent = lang.toUpperCase();
@@ -524,10 +529,39 @@ function openP(e) {
 }
 
 function resetForm() {
-    document.getElementById('lcb').checked = false;
-    document.getElementById('cbtn').style.display = '';
-    document.getElementById('cbtn').disabled = true;
-    document.getElementById('succ').classList.remove('on');
+    // legal checkbox — KRITICKÉ: uživatel musí znovu potvrdit v novém jazyce
+    const lcb = document.getElementById('lcb');
+    if (lcb) lcb.checked = false;
+
+    // vyčistit zprávu
+    const msg = document.getElementById('msg');
+    if (msg) msg.value = '';
+    const mc = document.getElementById('msgcount');
+    if (mc) mc.textContent = '0';
+
+    // vyčistit custom částku + schovat jeho řádek
+    const cinp = document.getElementById('cinp');
+    if (cinp) cinp.value = '';
+    const crow = document.getElementById('crow');
+    if (crow) crow.classList.remove('on');
+
+    // zrušit zvýraznění u tlačítek částek a platebních metod
+    document.querySelectorAll('.ab.on, .pt.on').forEach(b => b.classList.remove('on'));
+    // první přednastavená částka je výchozí (apply() k ní nastaví i amt = a[0])
+    const firstAb = document.querySelector('.ab.a1');
+    if (firstAb) firstAb.classList.add('on');
+
+    // submit button – zpátky zobrazený, ale zakázaný (čeká na částku + checkbox)
+    const cbtn = document.getElementById('cbtn');
+    if (cbtn) {
+        cbtn.style.display = '';
+        cbtn.disabled = true;
+    }
+
+    // úspěšný stav (pokud visel z předchozí platby) zavřít
+    const succ = document.getElementById('succ');
+    if (succ) succ.classList.remove('on');
+
     updBtn();
 }
 

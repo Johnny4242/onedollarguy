@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "code": "de",
+    "name": "Deutsch",
+    "englishName": "German",
+    "flag": "🇩🇪",
+    "regions": ["DE", "AT"],
+    "direction": "ltr",
+    "isSourceOfTruth": false
+  },
+
+  "payment": {
+    "currency": "EUR",
+    "symbol": "€",
+    "symbolBeforeAmount": false,
+    "defaultAmounts": [1, 5, 10],
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Karte" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "paypal",   "icon": "🅿",  "name": "PayPal" },
+      { "id": "transfer", "icon": "🏦", "name": "Überweisung" },
+      { "id": "crypto",   "icon": "₿",  "name": "Crypto" }
+    ]
+  },
+
+  "ui": {
+    "cur": "EUR",
+    "sym": "€",
+    "pre": false,
+    "a": [1, 5, 10],
+
+    "ey": "Ein Experiment · 2026",
+
+    "h1a": "Gib mir",
+    "h1b": "einen",
+    "h1c": "dollar.",
+    "tag": "nur einen dollar<br><span class=\"tagline-opt\">(oder mehr?)</span>",
+    "sub": "Auf diesem Planeten leben <b>8.200.000.000</b> Menschen. 1 dollar tut niemandem weh. Mich macht er zum Milliardär. Du verlierst nichts, ich gewinne absolut alles.",
+
+    "meta": "Menschen haben schon gespendet",
+    "pct": "{p}% der Menschheit",
+    "sl1": "Spender",
+    "sl2": "Länder",
+    "sl3": "Heute",
+
+    "s1": "Betrag wählen",
+    "c1": "EUR · klassisch",
+    "c5": "EUR · mittel",
+    "c10": "EUR · Held",
+    "co": "∞",
+    "coc": "deine Wahl",
+
+    "s2": "Zahlungsmethode wählen",
+
+    "s3": "Hinterlasse mir eine Nachricht (optional)",
+    "msghint": "Ich lese jede einzelne",
+
+    "s4": "Senden",
+    "legal": "Es ist ein Geschenk. Keine Rückerstattung. Ich bin 18+. <span class=\"tl\" onclick=\"openT(event)\">Bedingungen lesen.</span>",
+    "btn": "Sende {a}",
+    "sec": "100% anonym · Sichere Zahlung",
+
+    "sTitle": "Danke. Wirklich.",
+    "sSub": "Irgendwo in Mitteleuropa hat gerade ein müder Kerl auf sein Handy geschaut und gelächelt. Das war ich. Dank dir.",
+
+    "abt": "Wer ist dieser Typ?",
+    "ap1": "<b>Niemand. Und genau darum geht es.</b>",
+    "ap2": "Ich bin ein ganz normaler Typ aus Mitteleuropa. Ich stehe um fünf auf, gehe in die Fabrik, komme müde zurück. Immer wieder.",
+    "ap3": "Ich bin keine Firma. Keine Wohltätigkeit. Kein Influencer. Keine rührselige Geschichte. Ich tue nicht so, als würde ich die Welt retten.",
+    "ap4": "Eine Idee ging mir nicht aus dem Kopf: <b>Was, wenn ich es wirklich versuche?</b> Wenn mir jeder einen dollar geben würde, würde es niemand merken. Ich wäre Milliardär. Also bin ich hier.",
+    "ap5": "Keine Versprechen. Keine Belohnungen. Keine NFTs. Nur ein Geldgeschenk und ein Dankeschön. Wenn es funktioniert — muss ich nie wieder einen Wecker stellen. Wenn nicht — wenigstens habe ich's versucht!",
+
+    "badge": "Anonym",
+    "tmt": "Bedingungen",
+    "ft": "© onedollarguy.com · Keine Wohltätigkeit · Nur persönliche Geschenke",
+
+    "nav_lang": "Sprache",
+    "nav_share": "teilen",
+    "share_title": "Teilen",
+    "close_title": "Schließen",
+
+    "astra_q": "?was bedeutet das?",
+    "astra_a": "„durch Mühsal<br>zu den Sternen\"",
+
+    "kontakt_btn": "Kontakt",
+    "kontakt_msg": "Ich möchte anonym bleiben — wenn du mich trotzdem kontaktieren willst, hier ist meine E-Mail:",
+
+    "share_tweet": "Ich habe gerade One Dollar Guy einen Beitrag gegeben. Noch 8,2 Milliarden zu gehen. {url} Mach mit!",
+
+    "ft_privacy": "Datenschutz",
+    "ft_soon": "(bald)",
+
+    "pmt": "Datenschutzerklärung",
+    "legal_loading": "Lädt…",
+    "legal_error": "Das Dokument konnte nicht geladen werden. Bitte versuche es erneut."
+  },
+
+  "faq": [
+    [
+      "Ist das Betrug?",
+      "Wenn ich ein Betrüger wäre, hätte ich mir eine bessere Geschichte ausgedacht. Die Welt retten, ein KI-Startup…\n\nAber nein — ich sage es dir geradeheraus: <b>Ich will Geld und tue nicht so, als wäre es für etwas anderes.</b> Ich bin ehrlich. Die Zahlungen laufen über weltweite Zahlungsdienstleister — alles ist sicher."
+    ],
+    [
+      "Warum sollte ich dir überhaupt einen dollar geben?",
+      "Musst du nicht. Niemand zwingt dich. Aber denk mal nach — <b>wann hast du zuletzt etwas getan, was dich praktisch nichts gekostet hat, aber jemandem Hoffnung geben konnte?</b> Einen \"dollar\" — idealerweise mehr 😄. Es liegt an dir. Ich kann dir nur danken."
+    ],
+    [
+      "Was machst du mit dem Geld?",
+      "So heiß wird's nicht gegessen 😄 <b>Von einem dollar bleibt mir am Ende nur ein Bruchteil übrig.</b>\u00a0 Ich will reisen. Ich war noch nie in einem Flugzeug. Ich will gut essen. Keine Sorgen haben, dass ich diesen Monat mit dem Geld nicht hinkomme. Meinen Kredit werde ich nicht zurückzahlen. <b>Und eines Tages kaufe ich mir vielleicht einen alten amerikanischen Wagen</b>\u00a0— das ist mein Traum seit Kindesbeinen. Ich weiß, dass ich anderen auch helfen würde, wenn das Projekt klappt. Und wenn es extrem gut läuft? Wie der Klassiker sagte — Nutten, Schnaps und Häppchen 😄."
+    ],
+    [
+      "Wer bist du eigentlich?",
+      "Honza. 30 Jahre, meine Haare werden schon dünner 😄 Ich arbeite mit den Händen. Von klein auf habe ich alles selbst repariert — was ich nicht reparieren konnte, hatte ich nicht. Ich trainiere gern und esse gutes Essen. <b>Ich bin Introvertierter, mag Tiere und Natur.</b> Ich hatte nie etwas umsonst, aber angeblich passieren Wunder, also mal sehen."
+    ],
+    [
+      "Denkst du wirklich, dass das klappt?",
+      "Weiß ich nicht. Aber eins weiß ich — <b>wenn ich es nicht versuche, weiß ich es sicher.</b> Das größte Bedauern im Leben sind nicht die Dinge, die nicht geklappt haben. Es sind die, die wir gar nicht erst angegangen sind."
+    ]
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "code": "cs",
+    "name": "Čeština",
+    "englishName": "Czech",
+    "flag": "🇨🇿",
+    "regions": ["CZ"],
+    "direction": "ltr",
+    "isSourceOfTruth": true,
+    "note": "Toto je zdroj pravdy (výchozí jazyk). Ostatní překlady se od tohoto souboru odvíjejí."
+  },
+
+  "payment": {
+    "currency": "CZK",
+    "symbol": "Kč",
+    "symbolBeforeAmount": false,
+    "defaultAmounts": [25, 100, 500],
+    "methods": [
+      { "id": "card",     "icon": "💳", "name": "Karta" },
+      { "id": "applepay", "icon": "",   "name": "Apple Pay" },
+      { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "transfer", "icon": "🏦", "name": "Převod" }
+    ]
+  },
+
+  "ui": {
+    "cur": "CZK",
+    "sym": "Kč",
+    "pre": false,
+    "a": [25, 100, 500],
+
+    "ey": "Osobní projekt · 2026",
+
+    "h1a": "Pošli mi",
+    "h1b": "jeden",
+    "h1c": "dollar.",
+    "tag": "jen jeden dollar<br><span class=\"tagline-opt\">(nebo víc, když chceš)</span>",
+    "sub": "Jsem Honza z Třebíče. Píšu o svém životě a sdílím svůj příběh online. Pokud tě moje stránky baví, můžeš mi poslat dollar jako symbolickou podporu — bez závazku, bez očekávání.",
+
+    "meta": "lidí už podpořilo",
+    "pct": "{p}% z plánovaného cíle",
+    "sl1": "Dárci",
+    "sl2": "Zemí",
+    "sl3": "Dnes",
+
+    "s1": "Vyber částku",
+    "c1": "CZK · symbolický dar",
+    "c5": "CZK · větší podpora",
+    "c10": "CZK · velkorysá podpora",
+    "co": "∞",
+    "coc": "tvoje volba",
+
+    "s2": "Vyber způsob platby",
+
+    "s3": "Nech mi vzkaz (nepovinné)",
+    "msghint": "Čtu každý vzkaz osobně",
+
+    "s4": "Odeslat",
+    "legal": "Toto je dobrovolný dar. Bez nároku na vrácení (kromě technických chyb). Potvrzuji, že je mi 18+. <span class=\"tl\" onclick=\"openT(event)\">Přečíst podmínky.</span>",
+    "btn": "Poslat dar {a}",
+    "sec": "Bezpečná platba přes Stripe · 100% šifrované",
+
+    "sTitle": "Děkuji. Vážně.",
+    "sSub": "Je krásné vědět, že někdo na druhé straně světa myslel zrovna na mě. Tvoje podpora pro mě hodně znamená.",
+
+    "abt": "Kdo je Honza?",
+    "ap1": "<b>Obyčejný chlap z Třebíče.</b>",
+    "ap2": "Jmenuji se Jan Pisk, je mi 30 let a žiju v Třebíči, v České republice. Pracuji rukama — od mala mě bavilo si všechno opravovat a tvořit. Rád cvičím, mám rád zvířata, dobré jídlo a klidné večery v přírodě.",
+    "ap3": "Tato stránka je můj osobní projekt. Není to firma. Není to charita. Není to influencer business. Jsem soukromá osoba, která sdílí svůj život a tvorbu online.",
+    "ap4": "<b>Proč jsem to vytvořil?</b> Chtěl jsem zkusit něco vlastního — sdílet svůj život s lidmi z celého světa a uvidět, jestli někoho oslovím. Pokud ano, dollar od dárců mi pomůže žít trochu volněji a věnovat víc času tvorbě.",
+    "ap5": "<b>Co dárcům slibuju?</b> Ze zákona ti za dar nemůžu nic dát — žádné odměny, certifikáty, NFT ani členství. Jen upřímné poděkování. Pokud chceš, napiš mi do vzkazu — odpovím.",
+
+    "badge": "Soukromá osoba",
+    "tmt": "Podmínky užití",
+    "ft": "© onedollarguy.com · Provozovatel: Jan Pisk, Třebíč, ČR · IČO: XXXXXXXX · Není to charita · Pouze osobní dary",
+
+    "nav_lang": "jazyk",
+    "nav_share": "sdílet",
+    "share_title": "Sdílet",
+    "close_title": "Zavřít",
+
+    "astra_q": "?co to znamená?",
+    "astra_a": "„přes překážky<br>ke hvězdám\"",
+
+    "kontakt_btn": "kontakt",
+    "kontakt_msg": "Pokud mi chceš napsat, zde je můj e-mail:",
+
+    "share_tweet": "Právě jsem podpořil Honzu z Třebíče přes onedollarguy.com — sdílí svůj život online. Mrkni na to: {url}",
+
+    "ft_privacy": "Soukromí",
+    "ft_soon": "(brzy)",
+
+    "pmt": "Zásady ochrany osobních údajů",
+    "legal_loading": "Načítám…",
+    "legal_error": "Dokument se nepodařilo načíst. Zkuste to prosím znovu."
+  },
+
+  "faq": [
+    [
+      "Je to bezpečné?",
+      "<b>Ano.</b> Platby zpracovává Stripe — jedna z největších a nejbezpečnějších platebních bran na světě. Tvé údaje karty se ke mně vůbec nedostanou, vše šifruje Stripe podle standardu PCI-DSS. Stejný systém používá Spotify, Shopify nebo Booking.com."
+    ],
+    [
+      "Proč bych ti měl poslat dollar?",
+      "Nemusíš. Tahle stránka je dobrovolná podpora, ne výzva. Pokud tě baví číst můj příběh nebo chceš podpořit někoho, kdo dělá něco svého, můžeš poslat dollar jako symbolický dárek. Pokud ne, není to problém."
+    ],
+    [
+      "Co s penězi uděláš?",
+      "Použiju je na běžný život. Nájem, jídlo, doprava. Pokud se nasbírá víc, chtěl bych konečně cestovat — nikdy jsem neletěl letadlem. Sním také o jednom konkrétním autě, které mě baví od dětství. Žádné velké sliby — jen normální život člověka, kterému dárci pomohli žít s menším stresem."
+    ],
+    [
+      "Kdo přesně jsi?",
+      "Jan Pisk, 30 let, Třebíč. Pracuji rukama, žiju obyčejným životem. Jsem podnikající fyzická osoba (OSVČ) s českým IČO, takže tahle stránka má jasného provozovatele s plnou identitou. Můj kontakt najdeš v patičce."
+    ],
+    [
+      "Můžu dostat peníze zpět?",
+      "Dar je ze zákona nevratný. Ale pokud dojde k technické chybě (například duplicitní stržení částky), napiš mi na info@onedollarguy.com a hned to vyřeším. Také pokud bys měl podezření, že tvou kartu někdo zneužil, kontaktuj mě i banku — vrátím peníze."
+    ],
+    [
+      "Je to charita?",
+      "<b>Ne.</b> Nejsem registrovaná nezisková organizace. Jsem soukromá osoba a tato stránka je můj osobní projekt. Příspěvky proto nejsou daňově odpočitatelné jako dary na charitu."
+    ],
+    [
+      "Funguje to opravdu globálně?",
+      "Ano. Platby přijímám přes Stripe a PayPal v desítkách měn z více než 60 zemí. Stránka je překládána do 22 jazyků. Bohužel z důvodů mezinárodních sankcí nemůžu přijímat platby z Ruska, Běloruska, Íránu, Severní Koreje a Sýrie."
+    ]
+  ]
+}

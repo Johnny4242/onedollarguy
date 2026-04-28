@@ -19,6 +19,7 @@
       { "id": "card",     "icon": "💳", "name": "Karta" },
       { "id": "applepay", "icon": "",   "name": "Apple Pay" },
       { "id": "gpay",     "icon": "G",  "name": "Google Pay" },
+      { "id": "paypal",   "icon": "P",  "name": "PayPal" },
       { "id": "transfer", "icon": "🏦", "name": "Převod" },
       { "id": "qr",       "icon": "▦",  "name": "QR platba" }
     ]
@@ -36,11 +37,11 @@
     "h1b": "jeden",
     "h1c": "dollar.",
     "tag": "jen jeden dollar<br><span class=\"tagline-opt\">(nebo víc?)</span>",
-    "sub": "Na planetě je <b>8 200 000 000</b> lidí. 1 dollar nikoho nezabije. Ty prakticky nic neztratíš, já získám úplně všechno. Pojď mě podpořit.",
+    "sub": "Na planetě je <b>8 200 000 000</b> lidí. 1 dollar nikoho nezabije. Ty prakticky nic neztratíš, já získám úplně všechno. <b>Pojď mě podpořit.</b>",
 
-    "meta": "lidí už podpořilo",
+    "meta": "lidí již podpořilo",
     "pct": "{p}% lidstva",
-    "sl1": "Celkem",
+    "sl1": "Podporovatelů",
     "sl2": "Zemí",
     "sl3": "Dnes",
 
@@ -57,7 +58,7 @@
     "msghint": "Čtu každý jeden",
 
     "s4": "Odeslat",
-    "legal": "Je to dar. Bez nároku na vrácení. Je mi 18+. <span class=\"tl\" onclick=\"openT(event)\">Přečíst podmínky.</span>",
+    "legal": "Digitální certifikát je dodán okamžitě (bez nároku na vrácení). Je mi 18+. <span class=\"tl\" onclick=\"openT(event)\">Přečíst podmínky.</span>",
     "btn": "Poslat {a}",
     "sec": "100% anonymní · Bezpečná platba",
 
@@ -68,12 +69,12 @@
     "ap1": "<b>Nikdo. A o tom to celé je.</b>",
     "ap2": "Jsem obyčejný chlap ze střední Evropy. Vstávám v pět, jdu do fabriky, vracím se unavený. Pořád dokola.",
     "ap3": "Nejsem firma. Nejsem charita. Nejsem influencer. Žádný dojemný příběh. Nepředstírám, že zachraňuju svět.",
-    "ap4": "Jeden nápad mi nešel z hlavy: <b>co kdybych to fakt zkusil?</b>",
-    "ap5": "Žádný sliby. Žádný odměny. Žádný NFT. Jen peněžní podpora a poděkování. Pokud to zafunguje – už nikdy nebudu muset nastavovat budík. Pokud ne – aspoň jsem to zkusil!",
+    "ap4": "Jeden nápad mi nešel z hlavy: <b>co kdybych to fakt zkusil?</b> Kdyby mi každý poslal dollar, ani si toho nevšimne. Já bych byl miliardář. Tak jsem tady.",
+    "ap5": "Žádný sliby. Žádný odměny. Žádný NFT. Jen jeden dollar a unikátní SVG certifikát s tvým číslem podporovatele. Pokud to zafunguje – už nikdy nebudu muset nastavovat budík. Pokud ne – aspoň jsem to zkusil!",
 
     "badge": "Anonymní",
     "tmt": "Podmínky",
-     "ft": "© onedollarguy.com · Provozovatel: Jan Pisk, ČR · IČO: XXXXXXXX · Není to charita · Pouze osobní podpora.",
+    "ft": "© onedollarguy.com · Není to charita · Osobní projekt",
 
     "nav_lang": "jazyk",
     "nav_share": "sdílet",
@@ -84,9 +85,9 @@
     "astra_a": "„přes překážky<br>ke hvězdám\"",
 
     "kontakt_btn": "kontakt",
-    "kontakt_msg": "Pokud mě chceš kontaktovat, zde je můj mail:",
+    "kontakt_msg": "Přeji si zůstat v anonymitě — přesto pokud mě chceš kontaktovat, zde je můj mail:",
 
-    "share_tweet": "Právě jsem dal One Dollar Guyovi příspěvek. Zbývá 8,2 miliardy. {url} Pojď přispět taky!",
+    "share_tweet": "Právě jsem podpořil One Dollar Guye a mám svůj SVG certifikát. Zbývá 8,2 miliardy lidí. {url} Pojď taky!",
 
     "ft_privacy": "Soukromí",
     "ft_soon": "(brzy)",
@@ -98,23 +99,23 @@
 
   "faq": [
     [
-       "Je to bezpečné?",
-      "<b>Ano.</b> Platby zpracovává Stripe a PayPal — největší a nejbezpečnější platební brana na světě. Tvé údaje karty se ke mně vůbec nedostanou, vše šifruje Stripe podle standardu PCI-DSS. Stejný systém používají všechny globální platformy."
+      "🤨 Je to bezpečné?",
+      "<b>Ano.</b> Platby zpracovává Stripe a PayPal — <b>největší a nejbezpečnější platební brány na světě.</b> Tvé údaje karty se ke mně vůbec nedostanou, vše šifruje Stripe podle standardu PCI-DSS. Stejný systém používají všechny globální platformy.\n\nPlatba je jednorázová."
     ],
     [
-          "Proč bych ti měl poslat dollar?",
-      "Nemusíš. Tahle stránka je dobrovolná podpora. Pokud chceš podpořit někoho, kdo dělá něco svého, můžeš poslat dollar jako symbolickou podporu. Pokud ne, není to problém. Z jednoho dollaru mi však po převodech zbyde minimum."
+      "💸 Proč bych ti měl poslat dollar a co za to dostanu?",
+      "<b>Nemusíš.</b> Tahle stránka je dobrovolná. Dostaneš ode mě unikátní SVG certifikát s číslem podporovatele. Cenu určuješ ty. Samozřejmě čím více tím lépe 😄. Z jednoho dollaru mi po převodech a odečtu DPH moc nezbyde 😄"
     ],
     [
-      "Co s těmi penězi uděláš?",
-      "Nebude to tak horké 😄 <b>Z jednoho dollaru mi ve vysledku zbyde minimum.</b>\u00a0 Chci cestovat. Ještě nikdy jsem neletěl letadlem. Chci jíst dobré jídlo. Nemít starosti, že tento měsíc nevyjdu s penězi. Nesplatím půjčku. <b>A jednoho dne koupím snad i starou americkou káru</b>\u00a0— to je sen od mala. Vím, že pokud by se projekt povedl, určitě bych pomohl také ostatním. No a kdyby se extrémně zadařilo? Jak řekl klasik - kurvy chlast a chlebíčky 😄."
+      "Kdo vlastně jsi?",
+      "Honza. 30 let, vlasy už mi řídnou 😄 Pracuji rukama. Od mala jsem si opravoval všechno sám\u00a0— co jsem si neopravil, to jsem neměl. Rád cvičím a jím dobré jídlo. <b>Jsem introvert, mám rád zvířata a přírodu.</b>"
     ],
     [
-      "Můžu dostat peníze zpět?",
-      "Dar je ze zákona nevratný. Ale pokud dojde k technické chybě (například duplicitní stržení částky), napiš mi na info@onedollarguy.com a hned to vyřeším. Také pokud bys měl podezření, že tvou kartu někdo zneužil, kontaktuj mě i banku — vrátím peníze."
+      "🏠 Co s těmi penězi uděláš?",
+      "Chci cestovat. Ještě nikdy jsem neletěl letadlem. Chci jíst dobré jídlo. Nemít starosti, že tento měsíc nevyjdu s penězi. Nesplatím půjčku. <b>A jednoho dne koupím snad i starou americkou káru</b>\u00a0— to je sen od mala. Vím, že pokud by se projekt povedl, určitě bych pomohl také ostatním. No a kdyby se extrémně zadařilo?"
     ],
     [
-      "Myslíš, že to opravdu vyjde?",
+      "🌍 Myslíš, že to opravdu vyjde?",
       "Nevím. Ale vím jedno\u00a0— <b>kdybych to nezkusil, věděl bych to jistě.</b> Největší škoda v životě nejsou věci, které se nepovedly. Jsou to ty, do kterých jsme se ani nepustili."
     ]
   ]

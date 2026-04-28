@@ -37,7 +37,7 @@
     "h1b": "jeden",
     "h1c": "dollar.",
     "tag": "jen jeden dollar<br><span class=\"tagline-opt\">(nebo víc?)</span>",
-    "sub": "Na planetě je <b>8 200 000 000</b> lidí. 1 dollar nikoho nezabije. Ty prakticky nic neztratíš, já získám úplně všechno. <b>Pojď mě podpořit.</b>",
+    "sub": "Na planetě je <b>8 200 000 000</b> lidí. 1 dollar nikoho nezabije. Ty prakticky nic neztratíš, já získám úplně všechno.<br><br><b>Pojď mě podpořit.</b><br>Na oplátku dostaneš unikátní SVG certifikát.",
 
     "meta": "lidí již podpořilo",
     "pct": "{p}% lidstva",
@@ -99,23 +99,23 @@
 
   "faq": [
     [
-      "🤨 Je to bezpečné?",
-      "<b>Ano.</b> Platby zpracovává Stripe a PayPal — <b>největší a nejbezpečnější platební brány na světě.</b> Tvé údaje karty se ke mně vůbec nedostanou, vše šifruje Stripe podle standardu PCI-DSS. Stejný systém používají všechny globální platformy.\n\nPlatba je jednorázová."
+      "Je to bezpečné?",
+      "<b>Ano.</b> Platby zpracovává Lemon Squeezy přes Stripe a PayPal — <b>jedny z největších a nejbezpečnějších platebních systémů na světě.</b> Číslo karty ani CVV se ke mně nikdy nedostane, vše šifruje Stripe podle standardu PCI-DSS. K vystavení certifikátu si u sebe ukládám jen tvůj e-mail, zemi a údaje o objednávce — vše v souladu s GDPR (víc v <a href=\"/privacy\">Zásadách ochrany osobních údajů</a>).\n\nPlatba je jednorázová."
     ],
     [
-      "💸 Proč bych ti měl poslat dollar a co za to dostanu?",
-      "<b>Nemusíš.</b> Tahle stránka je dobrovolná. Dostaneš ode mě unikátní SVG certifikát s číslem podporovatele. Cenu určuješ ty. Samozřejmě čím více tím lépe 😄. Z jednoho dollaru mi po převodech a odečtu DPH moc nezbyde 😄"
+      "Proč bych ti měl poslat dollar a co za to dostanu?",
+      "<b>Nemusíš.</b> Tahle stránka je dobrovolná. Dostaneš ode mě unikátní SVG certifikát s číslem podporovatele. Cenu určuješ ty. Samozřejmě čím více tím lépe 😄. Z jednoho dollaru mi po převodech a odečtu DPH moc nezbyde 😔"
     ],
     [
       "Kdo vlastně jsi?",
       "Honza. 30 let, vlasy už mi řídnou 😄 Pracuji rukama. Od mala jsem si opravoval všechno sám\u00a0— co jsem si neopravil, to jsem neměl. Rád cvičím a jím dobré jídlo. <b>Jsem introvert, mám rád zvířata a přírodu.</b>"
     ],
     [
-      "🏠 Co s těmi penězi uděláš?",
-      "Chci cestovat. Ještě nikdy jsem neletěl letadlem. Chci jíst dobré jídlo. Nemít starosti, že tento měsíc nevyjdu s penězi. Nesplatím půjčku. <b>A jednoho dne koupím snad i starou americkou káru</b>\u00a0— to je sen od mala. Vím, že pokud by se projekt povedl, určitě bych pomohl také ostatním. No a kdyby se extrémně zadařilo?"
+      "Co s těmi penězi uděláš?",
+      "Chci cestovat. Ještě nikdy jsem neletěl letadlem. Chci jíst dobré jídlo. Nemít starosti, že tento měsíc nevyjdu s penězi. Nesplatím půjčku. <b>A jednoho dne koupím snad i starou americkou káru</b>\u00a0— to je sen od mala. Vím, že pokud by se projekt povedl, určitě bych pomohl také ostatním."
     ],
     [
-      "🌍 Myslíš, že to opravdu vyjde?",
+      "Myslíš, že to opravdu vyjde?",
       "Nevím. Ale vím jedno\u00a0— <b>kdybych to nezkusil, věděl bych to jistě.</b> Největší škoda v životě nejsou věci, které se nepovedly. Jsou to ty, do kterých jsme se ani nepustili."
     ]
   ]
